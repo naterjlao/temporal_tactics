@@ -3,7 +3,7 @@ using UnityEditor;
 public static class BuildScript
 {
     // These must be updated on a project-by-project basis.
-    private static string NAME = "TemporalTactics"   
+    private static string NAME = "TemporalTactics";
     private static string[] SCENES =
     {
         "Assets/_Temporal Tactics/Integrated/Scenes/Hello World Cube.unity"
