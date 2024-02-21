@@ -3,10 +3,10 @@ using UnityEditor;
 public static class BuildScript
 {
     // These must be updated on a project-by-project basis.
-    private static string NAME = "TemporalTactics";
-    private static string[] SCENES =
+    private static string name = "TemporalTactics";
+    private static string[] scenes =
     {
-        "Assets/_Temporal Tactics/Integrated/Scenes/Hello World Cube.unity"
+        "Assets/_TemporalTactics/Integrated/Scenes/Hello World Cube.unity"
     };
 
     private static void Build(string[] scenes, string locationPathName, BuildTarget target)
@@ -22,12 +22,12 @@ public static class BuildScript
 
     public static void BuildWindows()
     {
-        Build(SCENES, $"Builds/Windows/{NAME}.exe", BuildTarget.StandaloneWindows64);
+        Build(scenes, $"Builds/Windows/{name}.exe", BuildTarget.StandaloneWindows64);
     }
 
     public static void BuildMacOSX()
     {
-        Build(SCENES, $"Builds/MacOSX/{NAME}", BuildTarget.StandaloneOSX);
+        Build(scenes, $"Builds/MacOSX/{name}", BuildTarget.StandaloneOSX);
     }
 
     public static void BuildAll()
