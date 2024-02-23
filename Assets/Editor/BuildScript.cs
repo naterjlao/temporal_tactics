@@ -22,11 +22,13 @@ public static class BuildScript
         BuildPipeline.BuildPlayer(options);
     }
 
+    [MenuItem("Custom Utilities/Build Windows")]
     public static void BuildWindows()
     {
         Build(SCENES, $"Builds/Windows/{NAME}.exe", BuildTarget.StandaloneWindows64);
     }
 
+    [MenuItem("Custom Utilities/Build Linux")]
     public static void BuildMacOSX()
     {
         Build(SCENES, $"Builds/MacOSX/{NAME}", BuildTarget.StandaloneOSX);
