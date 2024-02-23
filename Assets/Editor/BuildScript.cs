@@ -13,13 +13,7 @@ public static class BuildScript
 
     private static void Build(string[] scenes, string locationPathName, BuildTarget target)
     {
-        BuildPlayerOptions options = new BuildPlayerOptions
-        {
-            scenes = scenes,
-            locationPathName = locationPathName,
-            target = target
-        };
-        BuildPipeline.BuildPlayer(options);
+        BuildPipeline.BuildPlayer(scenes, locationPathName, target, BuildOptions.None);
     }
 
     [MenuItem("Custom Utilities/Build Windows")]
