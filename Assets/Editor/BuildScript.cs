@@ -6,8 +6,10 @@ public static class BuildScript
     private static string NAME = "TemporalTactics";
     private static string[] SCENES =
     {
+        "Assets/_TemporalTactics/Integrated/Scenes/StartScreen.unity",
         "Assets/_TemporalTactics/Integrated/Scenes/Hello World Cube.unity"
     };
+    /// @todo this probably can be autopopulated from the Build Settings file....
 
     private static void Build(string[] scenes, string locationPathName, BuildTarget target)
     {
