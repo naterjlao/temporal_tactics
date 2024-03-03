@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22b8d854535bc1641b12adc3b6b664e2, type: 3}
+  m_Name: Tower Defense Tile Set - Integrated
+  m_EditorClassIdentifier: 
+  Base: {fileID: 174831509103936568, guid: e762b65875f2c66499a373047b57faec, type: 3}
+  Standard: {fileID: 5078038342718772110, guid: 8638f464787bdbb4aaa70144453decc0,
+    type: 3}
+  Bump: {fileID: 568612642423146472, guid: 72ccbd9beaa6eec4da32a2f53c6ed4d0, type: 3}
+  CornerInner: {fileID: 7718362454965986849, guid: 47503df849e292444a2d026721eb33f0,
+    type: 3}
+  CornerLarge: {fileID: 3513599215315014412, guid: 5084ceda7d2a0c74e94b77f667c968dd,
+    type: 3}
+  CornerOuter: {fileID: 1398012474588571960, guid: 5140ab6252000dd42b46c492d710bc7a,
+    type: 3}
+  CornerRound: {fileID: 2935273473647684007, guid: 717f221814653314dbf791b29cf94f9c,
+    type: 3}
+  CornerSquare: {fileID: 4528760769696450676, guid: 79101e08e11a62f46b9fbdbd0e3612ea,
+    type: 3}
+  Crossing: {fileID: 4618104504021144572, guid: e54e9e4bb233e0b44b518e49ad628448,
+    type: 3}
+  Crystal: {fileID: 7031604145659815449, guid: ea6e37892cd8a0a4a8cda176d0412935, type: 3}
+  Dirt: {fileID: 7076807044813941619, guid: 09e11cf31c8d0ed478ad720afb4de575, type: 3}
+  DirtHigh: {fileID: 8040010660136640895, guid: 3dd816b461ccb8d4f998330fb631d1ff,
+    type: 3}
+  End: {fileID: 3462897164759211292, guid: 8d1f894cdfaaecc45827a483a4a21a2f, type: 3}
+  EndRound: {fileID: 5692380614698027141, guid: 6ca508fd54bb99a46a873219184cdf12,
+    type: 3}
+  EndRoundSpawn: {fileID: 1334777215513744373, guid: 50a5e709a38f2c7489ff0087fa2fdaff,
+    type: 3}
+  EndSpawn: {fileID: 1292734655116067703, guid: 0fd8efbf65474c04a9596d5a1b39bb3f,
+    type: 3}
+  Hill: {fileID: 3237415488066418866, guid: 5bacade74b487454c86de49703d24cc8, type: 3}
+  RiverBridge: {fileID: 9024772552832983544, guid: c9ed879252d1de74587c007c78420da0,
+    type: 3}
+  RiverCorner: {fileID: 3439673239771391140, guid: f96fabbc4dd6b164ba624948e7d878cf,
+    type: 3}
+  RiverFall: {fileID: 561670362105152993, guid: 4fe9e8c5b0d9b204b870e2449b43875d,
+    type: 3}
+  RiverSlope: {fileID: 42167435596601266, guid: 612ee2b48af890243b22d3dd46a7fb42,
+    type: 3}
+  RiverSlopeLarge: {fileID: 6268254549329739715, guid: ebc5fcd2ce4ebf840a96c921fa6bdf86,
+    type: 3}
+  RiverStraight: {fileID: 5322328761573901056, guid: 9f3edfe76f250474ab58f940c960d3eb,
+    type: 3}
+  RiverTransition: {fileID: 5139807185302169780, guid: b913071eac0a9d2448ca3ac8fb3ca758,
+    type: 3}
+  Rock: {fileID: 8194149307598946464, guid: b2c7f1afbe584a84da922e5f496b1b2c, type: 3}
+  Slope: {fileID: 5900413107280738454, guid: 10373cdb70a50d440baef44273de259c, type: 3}
+  Spawn: {fileID: 137260591460357545, guid: 59c10b14d82b62e46b9e19a1280884e4, type: 3}
+  SpawnRound: {fileID: 4221198978748737547, guid: d6c850254e0786848ab65ae2c44a1795,
+    type: 3}
+  Split: {fileID: 2289617380037460343, guid: f90e7083bd104094eb675992293e11bd, type: 3}
+  Straight: {fileID: 5099950706889347619, guid: 52974ed4ae107ee4b8633097c5611d1f,
+    type: 3}
+  StraightHill: {fileID: 3212610985109905367, guid: 088ab085d118da0439dee98e2a952297,
+    type: 3}
+  StraightHillLarge: {fileID: 824296620021736547, guid: 12eb66d33f437ed498771601ce36741f,
+    type: 3}
+  Transition: {fileID: 8952159198683692528, guid: 0f5c032003c14c0438e9add5bea5a367,
+    type: 3}
+  Tree: {fileID: 4776857627560541897, guid: 9b314985e03e0f64f926672a941c2533, type: 3}
+  TreeDouble: {fileID: 4887567647100429086, guid: 346e5c1b80d7bc840af41fe35deaf84a,
+    type: 3}
+  TreeQuad: {fileID: 6926459609944285550, guid: 5fddecdb3675ad944b60ffc4c05f6a74,
+    type: 3}
+  wideCorner: {fileID: 4139339130933318098, guid: 5c4895d37d883e9499b32338116632bf,
+    type: 3}
+  wideSplit: {fileID: 3121785668974084043, guid: 89023f509e9c0eb43b51ad37e2781a0e,
+    type: 3}
+  wideStraight: {fileID: 8716250890492484362, guid: 6d629dffefb91bf4fa8880fbd348911d,
+    type: 3}
+  wideTransition: {fileID: 4516013792171160732, guid: 27fac4d90adc56f498d294d6c1ac657c,
+    type: 3}
