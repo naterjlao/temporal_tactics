@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &973950501981335841
+--- !u!1 &4367331864601996117
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2834144842582466448}
-  - component: {fileID: 4961958523479436159}
-  - component: {fileID: 5647377942087064725}
+  - component: {fileID: 4986691801533755177}
+  - component: {fileID: 4122006598231447897}
+  - component: {fileID: 1043656239402227152}
   m_Layer: 0
-  m_Name: tree 1
+  m_Name: tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2834144842582466448
+--- !u!4 &4986691801533755177
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 973950501981335841}
+  m_GameObject: {fileID: 4367331864601996117}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.24999999, y: 0.19999999, z: 0.24999999}
+  m_LocalPosition: {x: -0.24999999, y: 0.19999999, z: -0.24999999}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8570009014986793166}
+  m_Father: {fileID: 8196073450887568460}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4961958523479436159
+--- !u!33 &4122006598231447897
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 973950501981335841}
-  m_Mesh: {fileID: 6403828546791056307, guid: c027156ff34149c4689789c825b634f8, type: 3}
---- !u!23 &5647377942087064725
+  m_GameObject: {fileID: 4367331864601996117}
+  m_Mesh: {fileID: 4781277628412113339, guid: c027156ff34149c4689789c825b634f8, type: 3}
+--- !u!23 &1043656239402227152
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 973950501981335841}
+  m_GameObject: {fileID: 4367331864601996117}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -85,7 +85,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &2048343405469077453
+--- !u!1 &4403382456166694705
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,10 +93,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8570009014986793166}
-  - component: {fileID: 7015765817872903126}
-  - component: {fileID: 1802664399715951302}
-  - component: {fileID: 8328571752218441886}
+  - component: {fileID: 8196073450887568460}
+  - component: {fileID: 7167622324903104750}
+  - component: {fileID: 7193599673516472128}
+  - component: {fileID: 800344372853653594}
   m_Layer: 0
   m_Name: snow_tile_treeDouble
   m_TagString: Untagged
@@ -104,38 +104,38 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8570009014986793166
+--- !u!4 &8196073450887568460
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2048343405469077453}
+  m_GameObject: {fileID: 4403382456166694705}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3173454186293170963}
-  - {fileID: 2834144842582466448}
-  m_Father: {fileID: 2615136919164054877}
+  - {fileID: 4986691801533755177}
+  - {fileID: 7872350388679324309}
+  m_Father: {fileID: 5788519409649744114}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7015765817872903126
+--- !u!33 &7167622324903104750
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2048343405469077453}
+  m_GameObject: {fileID: 4403382456166694705}
   m_Mesh: {fileID: -505992850416442832, guid: c027156ff34149c4689789c825b634f8, type: 3}
---- !u!23 &1802664399715951302
+--- !u!23 &7193599673516472128
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2048343405469077453}
+  m_GameObject: {fileID: 4403382456166694705}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -172,13 +172,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8328571752218441886
+--- !u!65 &800344372853653594
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2048343405469077453}
+  m_GameObject: {fileID: 4403382456166694705}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -193,7 +193,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.99999994, y: 0.19999999, z: 0.99999994}
   m_Center: {x: 0, y: 0.099999994, z: 0}
---- !u!1 &5422004927496338322
+--- !u!1 &7090566700467577308
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -201,78 +201,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2615136919164054877}
+  - component: {fileID: 7872350388679324309}
+  - component: {fileID: 4906619403247473286}
+  - component: {fileID: 4472597633015996820}
   m_Layer: 0
-  m_Name: GridTile snow_tile_treeDouble
+  m_Name: tree 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2615136919164054877
+--- !u!4 &7872350388679324309
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5422004927496338322}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8570009014986793166}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8261696930359010517
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3173454186293170963}
-  - component: {fileID: 367598348895283706}
-  - component: {fileID: 6045774622657418520}
-  m_Layer: 0
-  m_Name: tree
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3173454186293170963
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8261696930359010517}
+  m_GameObject: {fileID: 7090566700467577308}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.24999999, y: 0.19999999, z: -0.24999999}
+  m_LocalPosition: {x: 0.24999999, y: 0.19999999, z: 0.24999999}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8570009014986793166}
+  m_Father: {fileID: 8196073450887568460}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &367598348895283706
+--- !u!33 &4906619403247473286
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8261696930359010517}
-  m_Mesh: {fileID: 4781277628412113339, guid: c027156ff34149c4689789c825b634f8, type: 3}
---- !u!23 &6045774622657418520
+  m_GameObject: {fileID: 7090566700467577308}
+  m_Mesh: {fileID: 6403828546791056307, guid: c027156ff34149c4689789c825b634f8, type: 3}
+--- !u!23 &4472597633015996820
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8261696930359010517}
+  m_GameObject: {fileID: 7090566700467577308}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -310,3 +278,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &8756966230445460860
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5788519409649744114}
+  m_Layer: 0
+  m_Name: GridTile snow_tile_treeDouble
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5788519409649744114
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8756966230445460860}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8196073450887568460}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

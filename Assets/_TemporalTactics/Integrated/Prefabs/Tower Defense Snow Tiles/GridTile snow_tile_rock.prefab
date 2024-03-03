@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2333521776277272895
+--- !u!1 &80572923417343632
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7154310995768550171}
-  - component: {fileID: 4110009759433362118}
-  - component: {fileID: 2032897350928980408}
+  - component: {fileID: 6862419906109844864}
+  m_Layer: 0
+  m_Name: GridTile snow_tile_rock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6862419906109844864
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80572923417343632}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7022362081284129688}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &90289228931646797
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3769288779601633700}
+  - component: {fileID: 3165544461494142071}
+  - component: {fileID: 3581471719639793246}
   m_Layer: 0
   m_Name: rocks
   m_TagString: Untagged
@@ -18,36 +50,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7154310995768550171
+--- !u!4 &3769288779601633700
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2333521776277272895}
+  m_GameObject: {fileID: 90289228931646797}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.4438229e-15, y: 0.19999999, z: -5.7752917e-15}
   m_LocalScale: {x: 1.009243, y: 1, z: 1.069664}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5058460563674867745}
+  m_Father: {fileID: 7022362081284129688}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4110009759433362118
+--- !u!33 &3165544461494142071
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2333521776277272895}
+  m_GameObject: {fileID: 90289228931646797}
   m_Mesh: {fileID: -6679825976550175534, guid: ac281a62c1c67d248b8bbe8051f027ed, type: 3}
---- !u!23 &2032897350928980408
+--- !u!23 &3581471719639793246
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2333521776277272895}
+  m_GameObject: {fileID: 90289228931646797}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -84,7 +116,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &4783563447615495782
+--- !u!1 &3483329984603528198
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,10 +124,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5058460563674867745}
-  - component: {fileID: 2850947858867087939}
-  - component: {fileID: 6672402435950830011}
-  - component: {fileID: 4805608233735271901}
+  - component: {fileID: 7022362081284129688}
+  - component: {fileID: 5868604585972137027}
+  - component: {fileID: 6351952007738455021}
+  - component: {fileID: 3601060115058164096}
   m_Layer: 0
   m_Name: snow_tile_rock
   m_TagString: Untagged
@@ -103,37 +135,37 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5058460563674867745
+--- !u!4 &7022362081284129688
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4783563447615495782}
+  m_GameObject: {fileID: 3483329984603528198}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7154310995768550171}
-  m_Father: {fileID: 1006444550989135660}
+  - {fileID: 3769288779601633700}
+  m_Father: {fileID: 6862419906109844864}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2850947858867087939
+--- !u!33 &5868604585972137027
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4783563447615495782}
+  m_GameObject: {fileID: 3483329984603528198}
   m_Mesh: {fileID: -1301074677336166470, guid: ac281a62c1c67d248b8bbe8051f027ed, type: 3}
---- !u!23 &6672402435950830011
+--- !u!23 &6351952007738455021
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4783563447615495782}
+  m_GameObject: {fileID: 3483329984603528198}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -170,13 +202,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4805608233735271901
+--- !u!65 &3601060115058164096
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4783563447615495782}
+  m_GameObject: {fileID: 3483329984603528198}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -191,35 +223,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.99999994, y: 0.19999999, z: 0.99999994}
   m_Center: {x: 0, y: 0.099999994, z: 0}
---- !u!1 &7257457520345528940
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1006444550989135660}
-  m_Layer: 0
-  m_Name: GridTile snow_tile_rock
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1006444550989135660
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7257457520345528940}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5058460563674867745}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

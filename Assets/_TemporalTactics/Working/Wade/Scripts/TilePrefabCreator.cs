@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class TilePrefabCreator : MonoBehaviour
 {
+    [SerializeField] Vector3 _childPosition;
     [SerializeField] List<GameObject> _tilesToCreate;
 
     [Button]
@@ -18,6 +19,7 @@ public class TilePrefabCreator : MonoBehaviour
 
             var newChild = Instantiate(tile, newRoot.transform);
             newChild.AddComponent<BoxCollider>();
+            newChild.transform.localPosition = _childPosition;
             newChild.name = tile.name;
         }
     }

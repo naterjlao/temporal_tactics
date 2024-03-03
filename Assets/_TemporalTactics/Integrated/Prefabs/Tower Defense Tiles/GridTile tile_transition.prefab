@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1814355348045343419
+--- !u!1 &1483920921141131506
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 71341683680529906}
-  - component: {fileID: 6321798465444193547}
-  - component: {fileID: 2979135277458804804}
-  - component: {fileID: 2676718776802583897}
+  - component: {fileID: 6700201000184777752}
+  - component: {fileID: 5770886915454163274}
+  - component: {fileID: 8739809895373734454}
+  - component: {fileID: 4052879836573918457}
   m_Layer: 0
   m_Name: tile_transition
   m_TagString: Untagged
@@ -19,36 +19,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &71341683680529906
+--- !u!4 &6700201000184777752
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814355348045343419}
+  m_GameObject: {fileID: 1483920921141131506}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 567719542632280462}
+  m_Father: {fileID: 5572153946518715869}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6321798465444193547
+--- !u!33 &5770886915454163274
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814355348045343419}
+  m_GameObject: {fileID: 1483920921141131506}
   m_Mesh: {fileID: 3021915098023038074, guid: 78b5d086ef881a448a0ec66f26f1c7cd, type: 3}
---- !u!23 &2979135277458804804
+--- !u!23 &8739809895373734454
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814355348045343419}
+  m_GameObject: {fileID: 1483920921141131506}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -86,13 +86,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2676718776802583897
+--- !u!65 &4052879836573918457
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814355348045343419}
+  m_GameObject: {fileID: 1483920921141131506}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -107,7 +107,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.99999994, y: 0.19999999, z: 0.99999994}
   m_Center: {x: 0, y: 0.099999994, z: 0}
---- !u!1 &8952159198683692528
+--- !u!1 &5271085799369702220
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 567719542632280462}
+  - component: {fileID: 5572153946518715869}
   m_Layer: 0
   m_Name: GridTile tile_transition
   m_TagString: Untagged
@@ -123,19 +123,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &567719542632280462
+--- !u!4 &5572153946518715869
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8952159198683692528}
+  m_GameObject: {fileID: 5271085799369702220}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 71341683680529906}
+  - {fileID: 6700201000184777752}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

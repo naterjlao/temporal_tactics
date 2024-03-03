@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &922204456251519112
+--- !u!1 &6465882349504903209
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6876342975983289883}
-  - component: {fileID: 8916621975951489214}
-  - component: {fileID: 5995417803384506521}
-  - component: {fileID: 2945051850543489760}
+  - component: {fileID: 4997732390165274685}
+  - component: {fileID: 3753668707129468694}
+  - component: {fileID: 4406888932130895794}
+  - component: {fileID: 2158140295697501845}
   m_Layer: 0
   m_Name: tile_dirt
   m_TagString: Untagged
@@ -19,36 +19,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6876342975983289883
+--- !u!4 &4997732390165274685
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922204456251519112}
+  m_GameObject: {fileID: 6465882349504903209}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2979955513434921804}
+  m_Father: {fileID: 7629852102573865143}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8916621975951489214
+--- !u!33 &3753668707129468694
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922204456251519112}
+  m_GameObject: {fileID: 6465882349504903209}
   m_Mesh: {fileID: 7564680027353115182, guid: 8fa870f6bfd380b4d828e67ced5ed52f, type: 3}
---- !u!23 &5995417803384506521
+--- !u!23 &4406888932130895794
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922204456251519112}
+  m_GameObject: {fileID: 6465882349504903209}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -84,13 +84,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2945051850543489760
+--- !u!65 &2158140295697501845
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922204456251519112}
+  m_GameObject: {fileID: 6465882349504903209}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -105,7 +105,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.99999994, y: 0.099999994, z: 0.99999994}
   m_Center: {x: 0, y: 0.049999997, z: 0}
---- !u!1 &7076807044813941619
+--- !u!1 &6606955751471229075
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2979955513434921804}
+  - component: {fileID: 7629852102573865143}
   m_Layer: 0
   m_Name: GridTile tile_dirt
   m_TagString: Untagged
@@ -121,19 +121,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2979955513434921804
+--- !u!4 &7629852102573865143
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7076807044813941619}
+  m_GameObject: {fileID: 6606955751471229075}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6876342975983289883}
+  - {fileID: 4997732390165274685}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

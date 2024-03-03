@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &408630425277377198
+--- !u!1 &4637811717545627450
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5928575247148313880}
-  - component: {fileID: 7383853888749221830}
-  - component: {fileID: 8527120312496898881}
-  - component: {fileID: 8971663104054308574}
+  - component: {fileID: 6459549881580042704}
+  - component: {fileID: 148005096096826621}
+  - component: {fileID: 4027771051445586811}
+  - component: {fileID: 786895714325961655}
   m_Layer: 0
   m_Name: tile_bump
   m_TagString: Untagged
@@ -19,36 +19,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5928575247148313880
+--- !u!4 &6459549881580042704
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408630425277377198}
+  m_GameObject: {fileID: 4637811717545627450}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5453517003641440302}
+  m_Father: {fileID: 7443643703408505707}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7383853888749221830
+--- !u!33 &148005096096826621
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408630425277377198}
+  m_GameObject: {fileID: 4637811717545627450}
   m_Mesh: {fileID: -3514282383187389158, guid: 2ab4da674a19137419f815385faf1cb7, type: 3}
---- !u!23 &8527120312496898881
+--- !u!23 &4027771051445586811
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408630425277377198}
+  m_GameObject: {fileID: 4637811717545627450}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -86,13 +86,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8971663104054308574
+--- !u!65 &786895714325961655
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408630425277377198}
+  m_GameObject: {fileID: 4637811717545627450}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -107,7 +107,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.99999994, y: 0.29999998, z: 0.99999994}
   m_Center: {x: 0, y: 0.14999999, z: 0}
---- !u!1 &568612642423146472
+--- !u!1 &8967961577198972528
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5453517003641440302}
+  - component: {fileID: 7443643703408505707}
   m_Layer: 0
   m_Name: GridTile tile_bump
   m_TagString: Untagged
@@ -123,19 +123,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5453517003641440302
+--- !u!4 &7443643703408505707
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 568612642423146472}
+  m_GameObject: {fileID: 8967961577198972528}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5928575247148313880}
+  - {fileID: 6459549881580042704}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
