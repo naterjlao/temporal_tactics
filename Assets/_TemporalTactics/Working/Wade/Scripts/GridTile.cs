@@ -6,7 +6,7 @@ using UnityEngine;
 public class GridTile : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] GridTileSet _tileSet;
+    [Expandable] public GridTileSet TileSet;
     [SerializeField] GameObject _tile;
 
     [Header("Params")]
@@ -33,22 +33,25 @@ public class GridTile : MonoBehaviour
     //* -----------------------------------------------------------------------------
 
     [Dropdown("GetTilePrefab"), OnValueChanged("OnTilePrefabChanged")]
-    public TilePrefab _tilePrefab;
-    private DropdownList<TilePrefab> GetTilePrefab()
+    public TileType _tilePrefab;
+    private DropdownList<TileType> GetTilePrefab()
     {
-        return new DropdownList<TilePrefab> {
-            { "Standard", TilePrefab.Standard },
-            { "Alt",  TilePrefab.Alt },
+        return new DropdownList<TileType> {
+            { "Standard", TileType.Standard },
+            { "Alt",  TileType.Alt },
         };
     }
     private void OnTilePrefabChanged()
     {
-        SetTile(_tileSet.GetTile(_tilePrefab));
+        SetTile(TileSet.GetTile(_tilePrefab));
     }
+    public void SetTile(TileType tileType)
+    {
+        SetTile(TileSet.GetTile(tileType));
+    }
+
     public void SetTile(GameObject newTile)
     {
-        // if (!shouldChangeOnGenerate) return;
-
         if (_tile)
         {
             if (Application.isPlaying)

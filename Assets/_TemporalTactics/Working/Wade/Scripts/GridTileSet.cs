@@ -7,14 +7,14 @@ public class GridTileSet : ScriptableObject
     public GameObject Standard;
     public GameObject AltPrefab;
 
-    public GameObject GetTile(TilePrefab tileName)
+    public GameObject GetTile(TileType tileName)
     {
         switch (tileName)
         {
-            case TilePrefab.Standard:
+            case TileType.Standard:
                 return Standard;
 
-            case TilePrefab.Alt:
+            case TileType.Alt:
                 return AltPrefab;
 
 
@@ -24,7 +24,7 @@ public class GridTileSet : ScriptableObject
     }
 }
 
-public enum TilePrefab
+public enum TileType
 {
     Standard,
     Alt

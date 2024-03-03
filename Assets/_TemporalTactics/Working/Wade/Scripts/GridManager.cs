@@ -1,12 +1,7 @@
 using System.Collections.Generic;
-using System.Linq;
 using NaughtyAttributes;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 using Random = System.Random;
-using UnityEditor;
-using Unity.VisualScripting;
-using System.Drawing.Drawing2D;
 
 [ExecuteInEditMode]
 public class GridManager : MonoBehaviour
@@ -14,7 +9,7 @@ public class GridManager : MonoBehaviour
     [SerializeField] Grid _grid;
 
     [Header("Params")]
-    [SerializeField] private Vector2Int _size;
+    [SerializeField] public Vector2Int Size;
     [Expandable] public GridTileSet TileSet;
     [SerializeField] List<GridTile> _gridTiles;
 
@@ -52,9 +47,9 @@ public class GridManager : MonoBehaviour
         var coordinates = new List<Vector3Int>();
 
         // Calculate all coords for grid
-        for (int x = 0; x < _size.x; x++)
+        for (int x = 0; x < Size.x; x++)
         {
-            for (int z = 0; z < _size.y; z++)
+            for (int z = 0; z < Size.y; z++)
             {
                 coordinates.Add(new Vector3Int(x, 0, z));
             }
@@ -78,6 +73,8 @@ public class GridManager : MonoBehaviour
         newTile.transform.position = _grid.CellToWorld(coord);
         newTile.Coordinates = coord;
         newTile.SetName();
+        newTile.TileSet = TileSet;
+        newTile.SetTile(TileType.Standard);
 
         _gridTiles.Add(newTile);
     }

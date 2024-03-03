@@ -45,9 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2345e0234077e884fabc57858e3d8010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileSet: {fileID: 11400000, guid: 1c2acaf8e715ff0479f73e4394adb11a, type: 2}
+  TileSet: {fileID: 11400000, guid: 1c2acaf8e715ff0479f73e4394adb11a, type: 2}
   _tile: {fileID: 2098751528209526580}
   shouldChangeOnGenerate: 1
+  Coordinates: {x: 0, y: 0, z: 0}
   rotationDirection: {x: 0, y: 0, z: 0}
   _tilePrefab: 0
 --- !u!1001 &1288357924387787365
