@@ -51,5 +51,8 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Temporal Tactics.sln"
+    "dotnet.defaultSolution": "temporal_tactics.sln",
+    "cSpell.words": [
+        "Scriptable"
+    ]
 }
