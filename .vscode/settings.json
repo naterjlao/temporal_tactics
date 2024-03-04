@@ -53,6 +53,7 @@
     },
     "dotnet.defaultSolution": "temporal_tactics.sln",
     "cSpell.words": [
+        "Cooldown",
         "Raycast",
         "Scriptable"
     ]

@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _appearTime: 1
   _splineFollower: {fileID: 2604441798214818438}
+  meshTransform: {fileID: 745337147833518828}
   Data: {fileID: 11400000, guid: 484062ef8cc71964ba1d32a231761c70, type: 2}
 --- !u!114 &2604441798214818438
 MonoBehaviour:

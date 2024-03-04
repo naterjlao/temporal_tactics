@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] float _appearTime = 1;
     [SerializeField] SplineFollower _splineFollower;
+    [SerializeField] public Transform meshTransform;
     [SerializeField][Expandable] EnemyData Data;
 
     public float PathPosition => (float)_splineFollower.GetPercent();
