@@ -28,7 +28,7 @@ public class GridManager : MonoBehaviour
         //* Remove tiles
         foreach (var tile in _gridTiles)
         {
-            if (tile.shouldChangeOnGenerate)
+            if (tile.ShouldChangeOnGenerate)
             {
                 if (Application.isPlaying)
                 {

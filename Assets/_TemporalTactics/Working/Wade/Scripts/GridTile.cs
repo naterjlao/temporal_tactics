@@ -10,7 +10,7 @@ public class GridTile : MonoBehaviour
     [SerializeField] GameObject _tile;
 
     [Header("Params")]
-    public bool shouldChangeOnGenerate = true;
+    public bool ShouldChangeOnGenerate = true;
     public Vector3Int Coordinates;
 
     //* -----------------------------------------------------------------------------
@@ -81,11 +81,16 @@ public class GridTile : MonoBehaviour
     private void OnTilePrefabChanged()
     {
         SetTile(TileSet.GetTile(_tilePrefab));
+        ShouldChangeOnGenerate = false;
     }
     public void SetTile(TileType tileType)
     {
         SetTile(TileSet.GetTile(tileType));
     }
+    // private void OnValidate()
+    // {
+    //     SetTile(TileSet.GetTile(_tilePrefab));
+    // }
 
     public void SetTile(GameObject newTile)
     {
@@ -103,10 +108,12 @@ public class GridTile : MonoBehaviour
 
         _tile = Instantiate(newTile, transform);
         _tile.name = _tilePrefab.ToString();
+        SetName();
     }
 
     public void SetName()
     {
         gameObject.name = $"Grid Tile {Coordinates} {_tilePrefab}";
     }
+
 }
