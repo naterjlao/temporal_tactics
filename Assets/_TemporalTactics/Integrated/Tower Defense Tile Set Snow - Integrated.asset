@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tower Defense Tile Set Snow - Integrated
   m_EditorClassIdentifier: 
   Base: {fileID: 174831509103936568, guid: e762b65875f2c66499a373047b57faec, type: 3}
-  Standard: {fileID: 0}
+  Standard: {fileID: 862703305227224779, guid: 605d26244e0d22342b089d03753bd1c5, type: 3}
   Bump: {fileID: 0}
   CornerInner: {fileID: 0}
   CornerLarge: {fileID: 0}

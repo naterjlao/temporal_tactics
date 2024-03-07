@@ -1,17 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using NaughtyAttributes;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class GridTile : MonoBehaviour
 {
     [Header("References")]
     [Expandable] public GridTileSet TileSet;
     [SerializeField] GameObject _tile;
+    [SerializeField] public List<PathAltPoint> AltPoints;
 
     [Header("Params")]
     public bool ShouldChangeOnGenerate = true;
-    public Vector3Int Coordinates;
+    // public Vector3Int Coordinates;
+    public AlignWithGrid GridAlign;
 
     //* -----------------------------------------------------------------------------
     [Dropdown("GetDirectionNames"), OnValueChanged("OnRotationDirectionChanged")]
@@ -106,14 +111,19 @@ public class GridTile : MonoBehaviour
             }
         }
 
-        _tile = Instantiate(newTile, transform);
-        _tile.name = _tilePrefab.ToString();
+        // _tile = Instantiate(newTile, transform);
+        _tile = PrefabUtility.InstantiatePrefab(newTile) as GameObject;
         SetName();
+
+        _tile.transform.parent = transform;
+        _tile.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+
+        AltPoints = _tile.GetComponentsInChildren<PathAltPoint>().ToList();
     }
 
     public void SetName()
     {
-        gameObject.name = $"Grid Tile {Coordinates} {_tilePrefab}";
+        gameObject.name = $"Grid Tile {GridAlign?.GridLocation} {_tilePrefab}";
     }
 
 }

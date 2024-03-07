@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class AlignWithGrid : MonoBehaviour
 {
-    [SerializeField] Vector3Int GridLocation;
-    [SerializeField] Grid grid;
+    [SerializeField] public Vector3Int GridLocation;
+    [SerializeField] public Grid grid;
 
     void OnValidate()
     {

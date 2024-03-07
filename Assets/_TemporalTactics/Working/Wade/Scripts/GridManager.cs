@@ -13,13 +13,10 @@ public class GridManager : MonoBehaviour
     [Expandable] public GridTileSet TileSet;
     [SerializeField] List<GridTile> _gridTiles;
 
-    public static GridManager Instance;
-
     private void Awake()
     {
         if (!_grid) _grid = GetComponent<Grid>();
 
-        Instance = this;
     }
 
     [Button]
@@ -28,6 +25,8 @@ public class GridManager : MonoBehaviour
         //* Remove tiles
         foreach (var tile in _gridTiles)
         {
+            if (tile == null) break;
+
             if (tile.ShouldChangeOnGenerate)
             {
                 if (Application.isPlaying)
@@ -58,7 +57,7 @@ public class GridManager : MonoBehaviour
         //* For the tiles we kept, remove them from our new list of coords to generate at
         foreach (var tile in _gridTiles)
         {
-            coordinates.Remove(tile.Coordinates);
+            coordinates.Remove(tile.GridAlign.GridLocation);
         }
 
         foreach (var coord in coordinates)
@@ -71,10 +70,15 @@ public class GridManager : MonoBehaviour
     {
         var newTile = Instantiate(TileSet.Base, transform);
         newTile.transform.position = _grid.CellToWorld(coord);
-        newTile.Coordinates = coord;
         newTile.SetName();
         newTile.TileSet = TileSet;
         newTile.SetTile(TileType.Standard);
+
+        var align = newTile.GetComponent<AlignWithGrid>();
+
+        newTile.GridAlign = align;
+        align.grid = _grid;
+        align.GridLocation = coord;
 
         _gridTiles.Add(newTile);
     }
