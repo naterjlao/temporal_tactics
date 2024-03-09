@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using NaughtyAttributes;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -43,6 +44,7 @@ public class GridTile : MonoBehaviour
     {
         return new DropdownList<TileType> {
             { "Standard", TileType.Standard },
+            { "None", TileType.None },
             { "Bump", TileType.Bump },
             { "CornerInner", TileType.CornerInner },
             { "CornerLarge", TileType.CornerLarge },
@@ -88,14 +90,19 @@ public class GridTile : MonoBehaviour
         SetTile(TileSet.GetTile(_tilePrefab));
         ShouldChangeOnGenerate = false;
     }
-    public void SetTile(TileType tileType)
+    public void SetTile(TileType tileType, bool shouldChangeOnGenerate = false)
     {
         SetTile(TileSet.GetTile(tileType));
+
+        if (tileType != TileType.Standard)
+        {
+            ShouldChangeOnGenerate = true;
+        }
+        else
+        {
+            ShouldChangeOnGenerate = shouldChangeOnGenerate;
+        }
     }
-    // private void OnValidate()
-    // {
-    //     SetTile(TileSet.GetTile(_tilePrefab));
-    // }
 
     public void SetTile(GameObject newTile)
     {
@@ -115,6 +122,8 @@ public class GridTile : MonoBehaviour
         _tile = PrefabUtility.InstantiatePrefab(newTile) as GameObject;
         SetName();
 
+        if (!_tile) return;
+
         _tile.transform.parent = transform;
         _tile.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
 
@@ -123,6 +132,8 @@ public class GridTile : MonoBehaviour
 
     public void SetName()
     {
+        if (!GridAlign) GridAlign = GetComponent<AlignWithGrid>();
+
         gameObject.name = $"Grid Tile {GridAlign?.GridLocation} {_tilePrefab}";
     }
 

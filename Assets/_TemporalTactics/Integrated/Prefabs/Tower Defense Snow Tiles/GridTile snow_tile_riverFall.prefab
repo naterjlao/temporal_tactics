@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 182400602174101426}
   - component: {fileID: 6752657711565655960}
   - component: {fileID: 1857140561307774221}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: snow_tile_riverFall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 917569972067941709}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridTile snow_tile_riverFall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6862419906109844864}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridTile snow_tile_rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 3769288779601633700}
   - component: {fileID: 3165544461494142071}
   - component: {fileID: 3581471719639793246}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 5868604585972137027}
   - component: {fileID: 6351952007738455021}
   - component: {fileID: 3601060115058164096}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: snow_tile_rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}

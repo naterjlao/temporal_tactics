@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 932858556011983217}
   - component: {fileID: 4219659225326041220}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Alt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 148005096096826621}
   - component: {fileID: 4027771051445586811}
   - component: {fileID: 786895714325961655}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tile_bump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7443643703408505707}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridTile tile_bump
   m_TagString: Untagged
   m_Icon: {fileID: 0}

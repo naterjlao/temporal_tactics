@@ -50,6 +50,8 @@ public class GridTileSet : ScriptableObject
         {
             case TileType.Standard:
                 return Standard;
+            case TileType.None:
+                return null;
             case TileType.Bump:
                 return Bump;
             case TileType.CornerInner:
@@ -137,6 +139,7 @@ public class GridTileSet : ScriptableObject
 public enum TileType
 {
     Standard,
+    None,
     Bump,
     CornerInner,
     CornerLarge,

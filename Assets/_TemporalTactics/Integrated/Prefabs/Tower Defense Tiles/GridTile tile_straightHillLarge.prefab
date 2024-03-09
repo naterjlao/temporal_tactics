@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6816804086633092236}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridTile tile_straightHillLarge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2737974897948567236}
   - component: {fileID: 4507067042864425406}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Alt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 6808763094080697130}
   - component: {fileID: 3536115406053942142}
   - component: {fileID: 3801403547947358387}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tile_straightHillLarge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2978913191461448395}
   - component: {fileID: 8666228103345919756}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Alt (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

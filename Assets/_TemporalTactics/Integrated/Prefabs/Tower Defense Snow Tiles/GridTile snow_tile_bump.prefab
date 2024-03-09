@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2752897540682175413}
   - component: {fileID: 6524753806299021671}
   - component: {fileID: 7199397246961547157}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: snow_tile_bump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 77516334107756843}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridTile snow_tile_bump
   m_TagString: Untagged
   m_Icon: {fileID: 0}

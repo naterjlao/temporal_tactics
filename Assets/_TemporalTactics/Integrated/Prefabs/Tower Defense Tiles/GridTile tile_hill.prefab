@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5968918396322313227}
   - component: {fileID: 6439769130662114680}
   - component: {fileID: 5823352090124660834}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tile_hill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6543580076668115953}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridTile tile_hill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 2971437933750351339}
   - component: {fileID: 7682180094947910932}
   - component: {fileID: 7483539745179442818}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}

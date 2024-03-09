@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4355174878519391453}
   - component: {fileID: 4795151430229472985}
   - component: {fileID: 5927362330992956075}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tile_cornerSquare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4284473755740691866}
   - component: {fileID: 4561771281147462182}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Alt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8634225333071441548}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridTile tile_cornerSquare
   m_TagString: Untagged
   m_Icon: {fileID: 0}

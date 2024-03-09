@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6783359248283358759}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridTile tile_cornerInner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 987777992666461861}
   - component: {fileID: 2714168377921255426}
   - component: {fileID: 5574422841597895450}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tile_cornerInner
   m_TagString: Untagged
   m_Icon: {fileID: 0}

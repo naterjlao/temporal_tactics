@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5851403769496763185}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridTile tile_straightHill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 5035700216132441869}
   - component: {fileID: 2617534879844598805}
   - component: {fileID: 780527926149334699}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tile_straightHill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3481126136282908041}
   - component: {fileID: 2057451557382549897}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Alt
   m_TagString: Untagged
   m_Icon: {fileID: 0}

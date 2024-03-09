@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 284093628441004946}
   - component: {fileID: 3016927869439437911}
   - component: {fileID: 4322360326994490919}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tile_wideSplit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7136977141403248630}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridTile tile_wideSplit
   m_TagString: Untagged
   m_Icon: {fileID: 0}

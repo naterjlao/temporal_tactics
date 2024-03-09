@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6558774208699299157}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridTile tile_riverSlope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 8490338224846444470}
   - component: {fileID: 3740236055524394685}
   - component: {fileID: 5905708528012770866}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tile_riverSlope
   m_TagString: Untagged
   m_Icon: {fileID: 0}

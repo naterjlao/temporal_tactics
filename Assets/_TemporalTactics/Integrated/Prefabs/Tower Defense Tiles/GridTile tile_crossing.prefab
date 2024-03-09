@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1293725927906376997}
   - component: {fileID: 7420804029314305385}
   - component: {fileID: 2536143243114646209}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tile_crossing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5865339732715616706}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridTile tile_crossing
   m_TagString: Untagged
   m_Icon: {fileID: 0}

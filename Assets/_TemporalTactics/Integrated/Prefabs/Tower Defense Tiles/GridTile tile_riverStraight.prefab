@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 429040071616810105}
   - component: {fileID: 1420626177798497586}
   - component: {fileID: 8760124107650006585}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tile_riverStraight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3170245456625046974}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridTile tile_riverStraight
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4474757843814082343}
   - component: {fileID: 6241478285390250916}
   - component: {fileID: 8660324778599756029}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8292102444322080635}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridTile tile_crystal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 14323357075778134}
   - component: {fileID: 5952650691396010487}
   - component: {fileID: 8906279087353814043}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crystal 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 3638116186910485301}
   - component: {fileID: 6974283183576495326}
   - component: {fileID: 8310162473726296481}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crystal 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,7 +292,7 @@ GameObject:
   - component: {fileID: 77686240901193646}
   - component: {fileID: 4127972397928262370}
   - component: {fileID: 8923173789316415283}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crystal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,7 +376,7 @@ GameObject:
   - component: {fileID: 5899149338146641619}
   - component: {fileID: 2943139164012210782}
   - component: {fileID: 6194621390531769270}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tile_crystal
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7576412034893219716}
   - component: {fileID: 675568949412725564}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: At
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3992105225494727690}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridTile tile_riverBridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 7187492366670274290}
   - component: {fileID: 9213146903785166139}
   - component: {fileID: 3814403903423227202}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tile_riverBridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}

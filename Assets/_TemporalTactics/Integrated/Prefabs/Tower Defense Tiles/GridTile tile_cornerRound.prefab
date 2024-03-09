@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2128419432587603309}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridTile tile_cornerRound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2867321574671491275}
   - component: {fileID: 9058212785272996868}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Alt Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 9180095792146678720}
   - component: {fileID: 7535653958746877192}
   - component: {fileID: 6698958210578619042}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tile_cornerRound
   m_TagString: Untagged
   m_Icon: {fileID: 0}

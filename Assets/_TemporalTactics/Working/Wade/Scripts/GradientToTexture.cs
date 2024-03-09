@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
 
-using UnityEngine;
-
 public class GradientToTexture : MonoBehaviour
 {
     public Gradient gradient;

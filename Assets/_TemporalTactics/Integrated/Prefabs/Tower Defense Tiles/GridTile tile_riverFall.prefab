@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3470632529488375372}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridTile tile_riverFall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 5518872163994502780}
   - component: {fileID: 1021931722313111706}
   - component: {fileID: 6235045431404668035}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tile_riverFall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

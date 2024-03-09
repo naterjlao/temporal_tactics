@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2542066882151589831}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridTile tile_spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 4858146474912780192}
   - component: {fileID: 2499671999765613907}
   - component: {fileID: 4477399654600171560}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tile_spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}

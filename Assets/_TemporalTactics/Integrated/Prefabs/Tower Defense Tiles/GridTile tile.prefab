@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1641467366530048913}
   - component: {fileID: 1922671870455388823}
   - component: {fileID: 649580876930435847}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4807699318146722246}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridTile tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3682411803833853074}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridTile snow_tile_tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 4212670633844735592}
   - component: {fileID: 5994179055357453434}
   - component: {fileID: 3105613616457128852}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 6928644765080686333}
   - component: {fileID: 7627544445748702787}
   - component: {fileID: 1642653337309995587}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: snow_tile_tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}

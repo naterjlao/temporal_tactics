@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5237948871435633565}
   - component: {fileID: 787264825827827188}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Alt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 8338206659796794192}
   - component: {fileID: 4777063021009494442}
   - component: {fileID: 4396679315211577601}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tile_cornerLarge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1398629414861768054}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridTile tile_cornerLarge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8034173554475875850}
   - component: {fileID: 2990822363364656048}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Alt (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1878654644311879275}
   - component: {fileID: 6825819115766808477}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Alt (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

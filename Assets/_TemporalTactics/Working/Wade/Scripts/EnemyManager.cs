@@ -23,11 +23,11 @@ public class EnemyManager : MonoBehaviour
 
     private void Start()
     {
-        SpawnEnemy();
+        // SpawnEnemy();
 
-        Observable.Interval(System.TimeSpan.FromSeconds(2f)).Subscribe(_ =>
-        {
-            SpawnEnemy();
-        });
+        // Observable.Interval(System.TimeSpan.FromSeconds(2f)).Subscribe(_ =>
+        // {
+        //     SpawnEnemy();
+        // });
     }
 }

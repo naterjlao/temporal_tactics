@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5170181269175746682}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridTile tile_endRoundSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 5509033645872682393}
   - component: {fileID: 2376081663037908272}
   - component: {fileID: 1625418774330059990}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tile_endRoundSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}

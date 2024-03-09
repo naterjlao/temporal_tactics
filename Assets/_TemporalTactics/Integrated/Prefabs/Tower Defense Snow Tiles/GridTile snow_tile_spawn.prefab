@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4130680371765036011}
   - component: {fileID: 8473484630685993809}
   - component: {fileID: 3190977734744312750}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: snow_tile_spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8343979628824798200}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridTile snow_tile_spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}

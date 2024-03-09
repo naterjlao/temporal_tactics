@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5646843471965782316}
   - component: {fileID: 7371578428641953648}
   - component: {fileID: 7758642444897130506}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4172075126249636710}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridTile tile_treeDouble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 595210231234550087}
   - component: {fileID: 8910533689913251581}
   - component: {fileID: 5644222861410702757}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tree 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -212,7 +212,7 @@ GameObject:
   - component: {fileID: 4262751613828870370}
   - component: {fileID: 5711195763196931226}
   - component: {fileID: 7921963994766851131}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tile_treeDouble
   m_TagString: Untagged
   m_Icon: {fileID: 0}

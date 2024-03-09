@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3634650597970702962}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridTile snow_tile_wideTransition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 324187259973286674}
   - component: {fileID: 5738396934222808995}
   - component: {fileID: 5005862951123182786}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: snow_tile_wideTransition
   m_TagString: Untagged
   m_Icon: {fileID: 0}

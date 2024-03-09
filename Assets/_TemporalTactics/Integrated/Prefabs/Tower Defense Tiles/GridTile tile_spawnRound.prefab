@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4171588006644448675}
   - component: {fileID: 1595958266373632123}
   - component: {fileID: 9069058119485755698}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tile_spawnRound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8309122575893052659}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridTile tile_spawnRound
   m_TagString: Untagged
   m_Icon: {fileID: 0}

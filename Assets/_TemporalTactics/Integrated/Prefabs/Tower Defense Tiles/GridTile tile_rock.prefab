@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4354832108006526791}
   - component: {fileID: 2683192613629285996}
   - component: {fileID: 17553242373091363}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 4063043886667276557}
   - component: {fileID: 281653872573884706}
   - component: {fileID: 6776279173526770820}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tile_rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3036623801751781789}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridTile tile_rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
