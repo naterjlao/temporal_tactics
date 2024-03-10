@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22b8d854535bc1641b12adc3b6b664e2, type: 3}
+  m_Name: Tower Defense Tile Set Snow - Integrated
+  m_EditorClassIdentifier: 
+  Base: {fileID: 174831509103936568, guid: e762b65875f2c66499a373047b57faec, type: 3}
+  Standard: {fileID: 862703305227224779, guid: 605d26244e0d22342b089d03753bd1c5, type: 3}
+  Bump: {fileID: 0}
+  CornerInner: {fileID: 0}
+  CornerLarge: {fileID: 0}
+  CornerOuter: {fileID: 0}
+  CornerRound: {fileID: 0}
+  CornerSquare: {fileID: 0}
+  Crossing: {fileID: 0}
+  Crystal: {fileID: 0}
+  Dirt: {fileID: 0}
+  DirtHigh: {fileID: 0}
+  End: {fileID: 0}
+  EndRound: {fileID: 0}
+  EndRoundSpawn: {fileID: 0}
+  EndSpawn: {fileID: 0}
+  Hill: {fileID: 0}
+  RiverBridge: {fileID: 0}
+  RiverCorner: {fileID: 0}
+  RiverFall: {fileID: 0}
+  RiverSlope: {fileID: 0}
+  RiverSlopeLarge: {fileID: 0}
+  RiverStraight: {fileID: 0}
+  RiverTransition: {fileID: 0}
+  Rock: {fileID: 0}
+  Slope: {fileID: 0}
+  Spawn: {fileID: 0}
+  SpawnRound: {fileID: 0}
+  Split: {fileID: 0}
+  Straight: {fileID: 0}
+  StraightHill: {fileID: 0}
+  StraightHillLarge: {fileID: 0}
+  Transition: {fileID: 0}
+  Tree: {fileID: 0}
+  TreeDouble: {fileID: 0}
+  TreeQuad: {fileID: 0}
+  wideCorner: {fileID: 0}
+  wideSplit: {fileID: 0}
+  wideStraight: {fileID: 0}
+  wideTransition: {fileID: 0}

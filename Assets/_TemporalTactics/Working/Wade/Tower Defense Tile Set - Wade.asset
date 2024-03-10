@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22b8d854535bc1641b12adc3b6b664e2, type: 3}
+  m_Name: Tower Defense Tile Set - Wade
+  m_EditorClassIdentifier: 
+  Base: {fileID: 174831509103936568, guid: e762b65875f2c66499a373047b57faec, type: 3}
+  Standard: {fileID: 8179516709328923534, guid: 35ada9c2f2ba4b241b98da9eadcaacce,
+    type: 3}
+  AltPrefab: {fileID: 1278095303354505001, guid: 8685ad643ea63204c9977218488382e2,
+    type: 3}

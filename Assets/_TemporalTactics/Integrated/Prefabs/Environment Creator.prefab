@@ -1,0 +1,180 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7321491991850408338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 361668650771652927}
+  - component: {fileID: 276187069231869836}
+  m_Layer: 0
+  m_Name: Environment Creator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &361668650771652927
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7321491991850408338}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &276187069231869836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7321491991850408338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61538403297525a4997b4817e97facbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectionManager: {fileID: 0}
+  pathCreator: {fileID: 0}
+  tileSet: {fileID: 11400000, guid: 8d7a34e5ba64cf14cb4b45bb2e67b8db, type: 2}
+  selectedTileType: 14
+  EraseMode: 0
+  ToggleEraseMode:
+    m_Name: Toggle Erase Mode
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b152b806-50ed-4ffd-a0a7-642de6746f1c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 0ce74bfc-7c2f-4264-987c-a4a7737fe634
+      m_Path: <Keyboard>/e
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Toggle Erase Mode
+      m_Flags: 0
+    m_Flags: 0
+  CreatePathMode: 0
+  ToggleCreatePathMode:
+    m_Name: Toggle Create Path Mode
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b54c8c0b-322c-49cc-9673-12b8e549e5f1
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 9fdf31e4-c356-448a-9b47-2ed7f797f1da
+      m_Path: <Keyboard>/#(P)
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Toggle Create Path Mode
+      m_Flags: 0
+    m_Flags: 0
+  RemoveFromPathButton:
+    m_Name: Remove From Path Button
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 4b32949f-d9be-478d-990f-037b5d5f6293
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 3dad6581-fa11-48a8-b967-9ed5131849d4
+      m_Path: <Keyboard>/delete
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Remove From Path Button
+      m_Flags: 0
+    m_Flags: 0
+  RefreshPath:
+    m_Name: Refresh Path
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 760e3d73-120d-4080-bb19-802c265b80d8
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  RotateClockwise:
+    m_Name: Rotate Clockwise
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 79f6cab4-997a-4bde-8bab-c7d05d345d11
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 47ca4950-6796-4517-b335-b4284f1c1372
+      m_Path: <Keyboard>/rightArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate Clockwise
+      m_Flags: 0
+    m_Flags: 0
+  RotateCounterClockwise:
+    m_Name: Rotate Counter Clockwise
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 10214fdd-3acd-4ca4-b972-394172fd79da
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 4fc099a8-293d-42ea-8619-ec482bdcd2f9
+      m_Path: <Keyboard>/leftArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate Counter Clockwise
+      m_Flags: 0
+    m_Flags: 0
+  IterateTileTypeUp:
+    m_Name: Iterate Tile Type Up
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 2130d998-24c2-4f39-80c0-0382bc6a75f0
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 1486594e-52cd-4dd8-81e8-9d35a372e884
+      m_Path: <Keyboard>/upArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Iterate Tile Type Up
+      m_Flags: 0
+    m_Flags: 0
+  IterateTileTypeDown:
+    m_Name: Iterate Tile Type Down
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 6841e28c-2972-44c5-b605-6f87631c5023
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 4fd80a0d-ac27-4467-bcf8-ad964ad88122
+      m_Path: <Keyboard>/downArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Iterate Tile Type Down
+      m_Flags: 0
+    m_Flags: 0

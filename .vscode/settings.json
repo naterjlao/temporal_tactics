@@ -51,5 +51,10 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "temporal_tactics.sln"
+    "dotnet.defaultSolution": "temporal_tactics.sln",
+    "cSpell.words": [
+        "Cooldown",
+        "Raycast",
+        "Scriptable"
+    ]
 }
