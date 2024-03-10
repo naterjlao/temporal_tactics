@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices.ComTypes;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class GridSelectionManager : MonoBehaviour
@@ -66,7 +67,7 @@ public class GridSelectionManager : MonoBehaviour
         ray = _mainCam.ScreenPointToRay(Input.mousePosition);
 
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, placementLayers))
+        if (Physics.Raycast(ray, out hit, placementLayers) && !EventSystem.current.IsPointerOverGameObject())
         {
             _lastPosition = hit.point;
             _selectedObject = hit.collider.gameObject;

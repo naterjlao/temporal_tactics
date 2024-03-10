@@ -39,10 +39,10 @@ public class GridTileSet : ScriptableObject
     public GameObject Tree;
     public GameObject TreeDouble;
     public GameObject TreeQuad;
-    public GameObject wideCorner;
-    public GameObject wideSplit;
-    public GameObject wideStraight;
-    public GameObject wideTransition;
+    public GameObject WideCorner;
+    public GameObject WideSplit;
+    public GameObject WideStraight;
+    public GameObject WideTransition;
 
     public GameObject GetTile(TileType tileName)
     {
@@ -121,13 +121,13 @@ public class GridTileSet : ScriptableObject
             case TileType.TreeQuad:
                 return TreeQuad;
             case TileType.wideCorner:
-                return wideCorner;
+                return WideCorner;
             case TileType.wideSplit:
-                return wideSplit;
+                return WideSplit;
             case TileType.wideStraight:
-                return wideStraight;
+                return WideStraight;
             case TileType.wideTransition:
-                return wideTransition;
+                return WideTransition;
 
 
             default:
