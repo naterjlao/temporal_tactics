@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_TemporalTactics/Working/Nate/Scenes/StartScreen.unity
+    guid: d3571133c34bed648a097a8383fb61ae
+  - enabled: 1
+    path: Assets/_TemporalTactics/Integrated/Scenes/Hello World Cube.unity
+    guid: c02a49555ca0d39469f3d1ec564aef95
   m_configObjects: {}
