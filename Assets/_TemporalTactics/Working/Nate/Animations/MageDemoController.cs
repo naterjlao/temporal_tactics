@@ -8,6 +8,8 @@ public class MageDemoController : MonoBehaviour
     private int movement_speed_hash;
 
     public float BASE_SPEED = 5f;
+    public float AXIS_THRESHOLD = .5f;
+    public float GRAVITY = -9.8f;
 
     // Start is called before the first frame update
     void Start()
@@ -22,14 +24,19 @@ public class MageDemoController : MonoBehaviour
     void Update()
     {
         // Technically, this is a keyboard only game - so this might not be necessary
-        float AXIS_THRESHOLD = .5f;
         float h_axis = Input.GetAxis("Horizontal");
         float v_axis = Input.GetAxis("Vertical");
+        int command_speed = calculate_speed(h_axis, v_axis);
 
-        Debug.Log(h_axis + " " + v_axis);
+        update_gravity();
+        update_movement(h_axis, v_axis, command_speed);
+        update_rotation(h_axis, v_axis);
+        update_animation(command_speed);
+    }
 
+    private int calculate_speed(float h_axis, float v_axis)
+    {
         // Calculate movement speed - only run if we are walking.
-        // REF: https://www.youtube.com/watch?v=-FhvQDqmgmU
         int command_speed = 0;
         if ((Math.Abs(h_axis) > AXIS_THRESHOLD) || (Math.Abs(v_axis) > AXIS_THRESHOLD))
         {
@@ -37,15 +44,53 @@ public class MageDemoController : MonoBehaviour
             if (Input.GetKey("space"))
                 command_speed += 1;
         }
+        return command_speed;
+    }
 
-        int current_speed = animator.GetInteger(movement_speed_hash);
+    private void update_gravity()
+    {
+        if (!controller.isGrounded)
+        {
+            Vector3 fall = new Vector3(0,1,0) * GRAVITY;
+            Debug.Log(GRAVITY);
+            controller.Move(fall * Time.deltaTime);
+        }
+    }
+
+    private void update_movement(float h_axis, float v_axis, int command_speed)
+    {
+        Vector3 move = new Vector3(h_axis, 0, v_axis);
+        controller.Move(move * Time.deltaTime * BASE_SPEED * command_speed);
+    }
+
+    private void update_rotation(float h_axis, float v_axis)
+    {
+        //transform.eulerAngles = new Vector
+        if (Math.Abs(v_axis) > AXIS_THRESHOLD)
+        {
+            if (v_axis > 0)
+                transform.eulerAngles = new Vector3(0,0,0);
+            else
+                transform.eulerAngles = new Vector3(0,180,0);
+        }
+
+        if (Math.Abs(h_axis) > AXIS_THRESHOLD)
+        {
+            if (h_axis > 0)
+                transform.eulerAngles = new Vector3(0,90,0);
+            else
+                transform.eulerAngles = new Vector3(0,270,0);
+        }
+    }
+
+    private void update_animation(int command_speed)
+    {
         // Optimize: only use setter if there is a change of state
+        // REF: https://www.youtube.com/watch?v=-FhvQDqmgmU
+        int current_speed = animator.GetInteger(movement_speed_hash);
         if (current_speed != command_speed)
         {
             animator.SetInteger(movement_speed_hash, command_speed);
         }
-
-        Vector3 move = new Vector3(h_axis, 0, v_axis);
-        controller.Move(move * Time.deltaTime * BASE_SPEED * command_speed);
     }
 }
