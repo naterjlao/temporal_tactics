@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using DG.Tweening;
 
 public class MageDemoController : MonoBehaviour
 {
@@ -65,21 +66,27 @@ public class MageDemoController : MonoBehaviour
 
     private void update_rotation(float h_axis, float v_axis)
     {
-        //transform.eulerAngles = new Vector
+        int heading = -1;
         if (Math.Abs(v_axis) > AXIS_THRESHOLD)
         {
             if (v_axis > 0)
-                transform.eulerAngles = new Vector3(0,0,0);
+                heading = 0;
             else
-                transform.eulerAngles = new Vector3(0,180,0);
+                heading = 180;
         }
 
         if (Math.Abs(h_axis) > AXIS_THRESHOLD)
         {
             if (h_axis > 0)
-                transform.eulerAngles = new Vector3(0,90,0);
+                heading = 90;
             else
-                transform.eulerAngles = new Vector3(0,270,0);
+                heading = 270;
+        }
+
+        if (heading >= 0)
+        {
+            //transform.DORotate(new Vector3(0,heading,0),0.5f,RotateMode.FastBeyond360);
+            transform.DORotateQuaternion(Quaternion.Euler(0,heading,0), 0.5f);
         }
     }
 
