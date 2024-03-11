@@ -61,31 +61,49 @@ public class MageDemoController : MonoBehaviour
     private void update_movement(float h_axis, float v_axis, int command_speed)
     {
         Vector3 move = new Vector3(h_axis, 0, v_axis);
+        move.Normalize(); // Normalize the vector so that diagonal movement is consistent (RIP speedruns)
         controller.Move(move * Time.deltaTime * BASE_SPEED * command_speed);
     }
 
     private void update_rotation(float h_axis, float v_axis)
     {
-        int heading = -1;
-        if (Math.Abs(v_axis) > AXIS_THRESHOLD)
-        {
-            if (v_axis > 0)
-                heading = 0;
-            else
-                heading = 180;
-        }
+        bool v_turn = Math.Abs(v_axis) > AXIS_THRESHOLD;
+        bool h_turn = Math.Abs(h_axis) > AXIS_THRESHOLD;
 
-        if (Math.Abs(h_axis) > AXIS_THRESHOLD)
+        if (v_turn || h_turn)
         {
-            if (h_axis > 0)
-                heading = 90;
+            /// @todo there's prob a more clever way to do this, but I'm lazy
+            int heading;
+            // Diagonal Directions
+            if (v_turn && h_turn)
+            {
+                if ((v_axis > 0) && (h_axis > 0))
+                    heading = 45;
+                else if ((v_axis < 0) && (h_axis > 0))
+                    heading = 135;
+                else if ((v_axis < 0) && (h_axis < 0))
+                    heading = 225;
+                else
+                    heading = 315;
+            }
+            // X-Axis Cardinal Directions
+            else if (v_turn)
+            {
+                if (v_axis > 0)
+                    heading = 0;
+                else
+                    heading = 180;
+            }
+            // Z-Axis Cardinal Directions
             else
-                heading = 270;
-        }
+            {
+                if (h_axis > 0)
+                    heading = 90;
+                else
+                    heading = 270;
+            }
 
-        if (heading >= 0)
-        {
-            //transform.DORotate(new Vector3(0,heading,0),0.5f,RotateMode.FastBeyond360);
+            // Turn towards the direction we want to go
             transform.DORotateQuaternion(Quaternion.Euler(0,heading,0), 0.5f);
         }
     }
