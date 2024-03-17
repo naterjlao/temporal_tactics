@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 4496421043753411131}
   - component: {fileID: 5509033645872682393}
   - component: {fileID: 2376081663037908272}
-  - component: {fileID: 1625418774330059990}
+  - component: {fileID: 270802840700792458}
   m_Layer: 8
   m_Name: tile_endRoundSpawn
   m_TagString: Untagged
@@ -120,8 +120,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1625418774330059990
-BoxCollider:
+--- !u!64 &270802840700792458
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -138,6 +138,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.99999994, y: 0.19999999, z: 0.99999994}
-  m_Center: {x: 0, y: 0.099999994, z: 0}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 9222829700838172568, guid: 9eebc377e1c2eb14fa2f9ef3a8740ff2, type: 3}

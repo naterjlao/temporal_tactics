@@ -53,7 +53,6 @@ public class MageDemoController : MonoBehaviour
         if (!controller.isGrounded)
         {
             Vector3 fall = new Vector3(0,1,0) * GRAVITY;
-            Debug.Log(GRAVITY);
             controller.Move(fall * Time.deltaTime);
         }
     }

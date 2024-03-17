@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 5159732929030039433}
   - component: {fileID: 6808763094080697130}
   - component: {fileID: 3536115406053942142}
-  - component: {fileID: 3801403547947358387}
+  - component: {fileID: 3250439605493125293}
   m_Layer: 8
   m_Name: tile_straightHillLarge
   m_TagString: Untagged
@@ -164,8 +164,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3801403547947358387
-BoxCollider:
+--- !u!64 &3250439605493125293
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -182,9 +182,10 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.99999994, y: 0.39999998, z: 1.9999999}
-  m_Center: {x: 0, y: 0.19999999, z: 0}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8691859598779586860, guid: 6d2b837061e9d7a4589f0d8c4df6624a, type: 3}
 --- !u!1 &6164749620734944993
 GameObject:
   m_ObjectHideFlags: 0
