@@ -1,12 +1,11 @@
 using UnityEngine;
 
 
-[CreateAssetMenu(fileName = "New Enemy", menuName = "New Enemy Data", order = 100)]
+[CreateAssetMenu(fileName = "New Enemy", menuName = "Temporal Tactics/New Enemy Data", order = 100)]
 public class EnemyData : ScriptableObject
 {
     public float Speed;
     public float Health;
     public float Damage;
-
     public float SpawnCooldown;
 }

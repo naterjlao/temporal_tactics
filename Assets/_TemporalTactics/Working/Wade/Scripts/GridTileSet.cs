@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Grid Tile Set", menuName = "New Grid Tile Set", order = 100)]
+[CreateAssetMenu(fileName = "New Grid Tile Set", menuName = "Temporal Tactics/New Grid Tile Set", order = 100)]
 public class GridTileSet : ScriptableObject
 {
     public GridTile Base;

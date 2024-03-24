@@ -10,7 +10,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] float _appearTime = 1;
     [SerializeField] SplineFollower _splineFollower;
     [SerializeField] public Transform meshTransform;
-    [SerializeField][Expandable] EnemyData Data;
+    [SerializeField][Expandable] public EnemyData Data;
+
+    public float CurrentHealth;
 
     public float PathPosition => (float)_splineFollower.GetPercent();
 
@@ -19,6 +21,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         name = Data.name;
+        CurrentHealth = Data.Health;
 
         _splineFollower.followSpeed = 0;
         transform.localScale = Vector3.zero;
@@ -44,7 +47,7 @@ public class Enemy : MonoBehaviour
 
     public void ScaleOut()
     {
-        _splineFollower.enabled = false;
+        // _splineFollower.enabled = false;
         ScaleEnemy(false, false, () =>
         {
             Destroy(gameObject);
@@ -59,5 +62,16 @@ public class Enemy : MonoBehaviour
         enemyTweenerSpeed = DOTween.To(() => _splineFollower.followSpeed,
                                         x => _splineFollower.followSpeed = x,
                                         state ? Data.Speed : 0, _appearTime);
+    }
+
+    public void Damage(float amount)
+    {
+        CurrentHealth -= amount;
+
+        if (CurrentHealth <= 0)
+        {
+            GetComponentInParent<EnemyManager>().EnemyDestroyed(Data.Health);
+            ScaleOut();
+        }
     }
 }

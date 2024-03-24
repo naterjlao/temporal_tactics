@@ -9,6 +9,7 @@ public class PathCreator : MonoBehaviour
 {
     [SerializeField] SplineComputer _spline;
     [SerializeField] List<Transform> _pathTiles;
+    public List<Transform> PathTiles => _pathTiles;
 
     private void Awake()
     {

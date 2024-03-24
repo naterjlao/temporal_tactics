@@ -13,6 +13,8 @@ public class GridManager : MonoBehaviour
     [Expandable] public GridTileSet TileSet;
     [SerializeField] List<GridTile> _gridTiles;
 
+    public List<GridTile> GridTiles => _gridTiles;
+
     private void Awake()
     {
         if (!_grid) _grid = GetComponent<Grid>();
@@ -71,7 +73,7 @@ public class GridManager : MonoBehaviour
         var newTile = Instantiate(TileSet.Base, transform);
         newTile.transform.position = _grid.CellToWorld(coord);
         newTile.TileSet = TileSet;
-        newTile.SetTile(TileType.Standard);
+        newTile.SetTile(TileType.Standard, true);
 
         var align = newTile.GetComponent<AlignWithGrid>();
 

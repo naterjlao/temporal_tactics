@@ -10,11 +10,23 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] Enemy enemy;
     [SerializeField] SplineComputer _splineComputer;
     [SerializeField] Vector2 xOffset = new Vector2(-0.2f, 0.2f);
+    [SerializeField][Expandable] LevelEnemies levelEnemies;
 
-    System.IDisposable spawnDisposable;
+    int enemyCounter = 0;
+    float totalHealth = 0;
+    float healthDestroyed = 0;
+
+    public float Progress = 0;
+
+    private void Start()
+    {
+        totalHealth = CalculateTotalHealth();
+
+        StartEnemySpawn();
+    }
 
     [Button]
-    public void SpawnEnemy()
+    public void SpawnSingleEnemy()
     {
         var newEnemy = Instantiate(enemy, transform);
         newEnemy.SetSplineComputer(_splineComputer);
@@ -23,20 +35,66 @@ public class EnemyManager : MonoBehaviour
         newEnemy.meshTransform.position = offsetPos;
     }
 
-    public void StartSpawning()
+    [Button]
+    public void StartEnemySpawn()
     {
-        SpawnEnemy();
-
-        spawnDisposable?.Dispose();
-        spawnDisposable = Observable.Interval(System.TimeSpan.FromSeconds(2f)).Subscribe(_ =>
-        {
-            SpawnEnemy();
-        });
+        StartCoroutine(SpawnEnemiesCoroutine());
     }
 
-    public void StopSpawning()
+    IEnumerator SpawnEnemiesCoroutine()
     {
-        spawnDisposable?.Dispose();
-        spawnDisposable = null;
+        foreach (var enemy in levelEnemies.Enemies)
+        {
+            SpawnNewEnemy(enemy);
+            enemyCounter++;
+
+            // Debug.Log($"Enemies Left: {GetEnemyCount()}");
+
+            yield return new WaitForSeconds(enemy.Data.SpawnCooldown);
+        }
+    }
+
+    public void SpawnNewEnemy(Enemy enemy)
+    {
+        var newEnemy = Instantiate(enemy, transform);
+        newEnemy.SetSplineComputer(_splineComputer);
+
+        // todo change this to use spline positioner offset?
+        var offsetPos = new Vector3(Random.Range(xOffset.x, xOffset.y), 0, 0);
+        newEnemy.meshTransform.position = offsetPos;
+    }
+
+    public float CalculateTotalHealth()
+    {
+        var health = 0f;
+        foreach (var enemy in levelEnemies.Enemies)
+        {
+            health += enemy.Data.Health;
+        }
+
+        return health;
+    }
+
+    public float GetEnemyCount()
+    {
+        return levelEnemies.Enemies.Count - enemyCounter;
+    }
+
+    public void EnemyDestroyed(float health)
+    {
+        healthDestroyed += health;
+
+        var progress = GetProgress();
+        print($"Progress: {progress:F0}%");
+
+        if (progress >= 100)
+        {
+            Debug.Log("LEVEL COMPLETED!");
+        }
+    }
+
+    public float GetProgress()
+    {
+        return (healthDestroyed / totalHealth) * 100f;
     }
 }

@@ -39,7 +39,9 @@ public class GridTile : MonoBehaviour
     //* -----------------------------------------------------------------------------
 
     [Dropdown("GetTilePrefab"), OnValueChanged("OnTilePrefabChanged")]
-    public TileType _tilePrefab;
+    [SerializeField] TileType _tilePrefab;
+    public TileType TilePrefab => _tilePrefab;
+
     private DropdownList<TileType> GetTilePrefab()
     {
         return new DropdownList<TileType> {
