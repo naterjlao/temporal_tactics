@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8463005787726302211}
   - component: {fileID: 6168424185701816516}
   - component: {fileID: 2029699011728201645}
-  - component: {fileID: 6032469022519900503}
+  - component: {fileID: 6833487226944314947}
   m_Layer: 8
   m_Name: tile_split
   m_TagString: Untagged
@@ -86,8 +86,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6032469022519900503
-BoxCollider:
+--- !u!64 &6833487226944314947
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -104,9 +104,10 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.99999994, y: 0.19999999, z: 0.99999994}
-  m_Center: {x: 0, y: 0.099999994, z: 0}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6162401304737288215, guid: 47e2c15da4476cd4b8f207c25ed9df61, type: 3}
 --- !u!1 &6179862433386137647
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3579762656449975182}
   - component: {fileID: 2206201227640419146}
   - component: {fileID: 252900282950597674}
+  - component: {fileID: 4352182158652042528}
   m_Layer: 8
   m_Name: tree
   m_TagString: Untagged
@@ -84,6 +85,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &4352182158652042528
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701379051387358527}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.49999997
+  m_Height: 1.5199999
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.75999993, z: 0}
 --- !u!1 &3332251811287057228
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,7 +151,7 @@ GameObject:
   - component: {fileID: 4882802050726345757}
   - component: {fileID: 7575458598325056540}
   - component: {fileID: 3556256063485307246}
-  - component: {fileID: 2370719243789732739}
+  - component: {fileID: 1956431049756692967}
   m_Layer: 8
   m_Name: tile_tree
   m_TagString: Untagged
@@ -202,7 +226,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2370719243789732739
+--- !u!65 &1956431049756692967
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

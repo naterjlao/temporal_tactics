@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 2243728757964005506}
   - component: {fileID: 4227922482032709237}
   - component: {fileID: 5390576696942855385}
-  - component: {fileID: 6772633048982164748}
+  - component: {fileID: 2710100581697582986}
   m_Layer: 8
   m_Name: tile_straight
   m_TagString: Untagged
@@ -118,8 +118,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6772633048982164748
-BoxCollider:
+--- !u!64 &2710100581697582986
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -136,6 +136,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.99999994, y: 0.19999999, z: 0.99999994}
-  m_Center: {x: 0, y: 0.099999994, z: 0}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4851001423541414395, guid: 4720b40e9c6d40c4d8dfead51daafaac, type: 3}
