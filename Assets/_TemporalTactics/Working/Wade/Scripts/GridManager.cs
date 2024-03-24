@@ -70,7 +70,6 @@ public class GridManager : MonoBehaviour
     {
         var newTile = Instantiate(TileSet.Base, transform);
         newTile.transform.position = _grid.CellToWorld(coord);
-        newTile.SetName();
         newTile.TileSet = TileSet;
         newTile.SetTile(TileType.Standard);
 
@@ -80,6 +79,7 @@ public class GridManager : MonoBehaviour
         align.grid = _grid;
         align.GridLocation = coord;
 
+        newTile.SetName();
         _gridTiles.Add(newTile);
     }
 }
