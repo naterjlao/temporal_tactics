@@ -45,6 +45,7 @@ public class PathCreator : MonoBehaviour
     public void AddTileToPath(GridTile tile, bool shouldRebuild = false)
     {
         if (tile == null) return;
+        if (tile == _pathTiles.LastOrDefault()) return;
 
         var pointsToAdd = new List<SplinePoint>();
 
@@ -68,22 +69,17 @@ public class PathCreator : MonoBehaviour
         points.AddRange(pointsToAdd);
 
         _spline.SetPoints(points.ToArray());
-        if (shouldRebuild) _spline.Rebuild();
+        if (shouldRebuild) _spline.RebuildImmediate();
     }
 
     public void RemoveLastTile(bool shouldRebuild = false)
     {
         var lastTile = _pathTiles.Last();
-        var pointCount = lastTile.GetComponent<GridTile>().AltPoints.Count;
+        _pathTiles.Remove(lastTile);
 
-        var points = _spline.GetPoints().ToList();
-        for (int i = 0; i < pointCount; i++)
-        {
-            points.RemoveAt(points.Count - i);
-        }
+        CreatePath();
 
-        _spline.SetPoints(points.ToArray());
-        if (shouldRebuild) _spline.Rebuild();
+        if (shouldRebuild) _spline.RebuildImmediate();
     }
 
     SplinePoint NewPoint(Vector3 position)

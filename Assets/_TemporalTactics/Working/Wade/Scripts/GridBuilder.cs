@@ -8,11 +8,14 @@ public class GridBuilder : MonoBehaviour
 {
     [SerializeField] GridSelectionManager selectionManager;
     [SerializeField] PathCreator pathCreator;
+    [SerializeField] PathLine pathLine;
 
     [SerializeField] GridTileSet tileSet;
-    [SerializeField] TileType selectedTileType;
+    [SerializeField] public TileType SelectedTileType;
 
-    [SerializeField] bool EraseMode;
+    [SerializeField] GridBuilderUI gridBuilderUI;
+
+    [SerializeField] bool ResetMode;
     [Space]
     public InputAction ToggleEraseMode;
 
@@ -46,21 +49,13 @@ public class GridBuilder : MonoBehaviour
 
         ToggleEraseMode.started += ctx =>
         {
-            EraseMode = !EraseMode;
+            ResetMode = !ResetMode;
+            gridBuilderUI.resetToggle.isOn = ResetMode;
         };
 
         ToggleCreatePathMode.started += ctx =>
         {
-            CreatePathMode = !CreatePathMode;
-
-            if (CreatePathMode)
-            {
-                RemoveFromPathButton.Enable();
-            }
-            else
-            {
-                RemoveFromPathButton.Disable();
-            }
+            TogglePathMode(!CreatePathMode);
         };
 
         RemoveFromPathButton.started += ctx =>
@@ -85,17 +80,17 @@ public class GridBuilder : MonoBehaviour
 
         IterateTileTypeUp.started += ctx =>
         {
-            selectedTileType++;
+            SelectedTileType++;
         };
 
         IterateTileTypeUp.started += ctx =>
         {
-            selectedTileType--;
+            SelectedTileType--;
         };
 
         selectionManager.OnGridHover.AddListener(() =>
         {
-            if (EraseMode && Input.GetMouseButton(0))
+            if (ResetMode && Input.GetMouseButton(0))
             {
                 var selectedTile = selectionManager.GetSelectedGameObject()?.GetComponentInParent<GridTile>();
 
@@ -111,10 +106,11 @@ public class GridBuilder : MonoBehaviour
         if (CreatePathMode)
         {
             pathCreator.AddTileToPath(selectedTile, true);
+            pathLine.DrawPath();
         }
         else
         {
-            selectedTile?.SetTile(selectedTileType, true);
+            selectedTile?.SetTile(SelectedTileType, true);
         }
     }
 
@@ -122,5 +118,35 @@ public class GridBuilder : MonoBehaviour
     {
         if (!selectionManager) FindObjectOfType<GridSelectionManager>();
         if (!pathCreator) FindObjectOfType<PathCreator>();
+    }
+
+    public void ButtonToggleResetMode(bool value)
+    {
+        ResetMode = value;
+    }
+    public void TogglePathMode(bool value)
+    {
+        CreatePathMode = value;
+
+        if (CreatePathMode)
+        {
+            pathLine.DrawPath();
+            RemoveFromPathButton.Enable();
+        }
+        else
+        {
+            pathLine.HidePath();
+            RemoveFromPathButton.Disable();
+        }
+    }
+
+    public void RefreshPathUI()
+    {
+        pathCreator.CreatePath();
+    }
+
+    public void RemoveLastTileFromPath()
+    {
+        pathCreator.RemoveLastTile(true);
     }
 }

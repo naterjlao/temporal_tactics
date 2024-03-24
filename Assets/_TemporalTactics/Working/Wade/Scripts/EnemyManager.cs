@@ -11,8 +11,10 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] SplineComputer _splineComputer;
     [SerializeField] Vector2 xOffset = new Vector2(-0.2f, 0.2f);
 
+    System.IDisposable spawnDisposable;
+
     [Button]
-    void SpawnEnemy()
+    public void SpawnEnemy()
     {
         var newEnemy = Instantiate(enemy, transform);
         newEnemy.SetSplineComputer(_splineComputer);
@@ -21,13 +23,20 @@ public class EnemyManager : MonoBehaviour
         newEnemy.meshTransform.position = offsetPos;
     }
 
-    private void Start()
+    public void StartSpawning()
     {
-        // SpawnEnemy();
+        SpawnEnemy();
 
-        // Observable.Interval(System.TimeSpan.FromSeconds(2f)).Subscribe(_ =>
-        // {
-        //     SpawnEnemy();
-        // });
+        spawnDisposable?.Dispose();
+        spawnDisposable = Observable.Interval(System.TimeSpan.FromSeconds(2f)).Subscribe(_ =>
+        {
+            SpawnEnemy();
+        });
+    }
+
+    public void StopSpawning()
+    {
+        spawnDisposable?.Dispose();
+        spawnDisposable = null;
     }
 }
