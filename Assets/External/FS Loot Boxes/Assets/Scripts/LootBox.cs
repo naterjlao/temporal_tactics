@@ -1,5 +1,6 @@
 ﻿// © 2019 Flying Saci Game Studio
 // written by Sylker Teles
+// reviewed and edited by Henry Dana
 
 using System;
 using UnityEngine;
@@ -35,7 +36,8 @@ public class LootBox : MonoBehaviour
     /// <summary>
     /// How should the player open the box?
     /// </summary>
-    public OpeningMethods openingMethod;
+    /// Loot box is to be opened via collision
+    public OpeningMethods openingMethod = OpeningMethods.OpenOnCollision;
 
     /// <summary>
     /// You can use a tag for the player that can open the box.
@@ -55,7 +57,7 @@ public class LootBox : MonoBehaviour
     /// <summary>
     /// Close the box after player goes away
     /// </summary>
-    public bool closeOnExit;
+    public bool closeOnExit = true;
 
     /// <summary>
     /// The loot inside the box. 
@@ -74,6 +76,10 @@ public class LootBox : MonoBehaviour
     /// <value><c>true</c> if is open; otherwise, <c>false</c>.</value>
     public bool isOpen { get; set; }
 
+    // creates a boolean variable to determine if chest has been opened
+
+    public bool hasOpened;
+
     /// <summary>
     /// The box animator for leaping, open and close animations.
     /// </summary>
@@ -88,6 +94,10 @@ public class LootBox : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // at start, declares that chest has not yet been opened
+
+        hasOpened = false;
+
         // gets the animator
         animator = GetComponent<Animator>();
 
@@ -202,6 +212,16 @@ public class LootBox : MonoBehaviour
             // otherwise, open the box.
             else Open();
         }
+
+        // check if chest has been previously opened, and add gold if not
+
+        if (hasOpened == false)
+        {
+            lootCounter.goldCount = lootCounter.goldCount + 300;
+            hasOpened = true;
+            string goldCountStringUpdated = lootCounter.goldCount.ToString();
+            Debug.Log(goldCountStringUpdated);
+        }
     }
 
     /// <summary>
@@ -210,6 +230,9 @@ public class LootBox : MonoBehaviour
     /// <param name="collision">Collision.</param>
     private void OnCollisionExit(Collision collision)
     {
+        // debugs "chest has closed" upon closing chest
+        Debug.Log("Chest has closed");
+
         // flag the player as away.
         isPlayerAround = false;
 
