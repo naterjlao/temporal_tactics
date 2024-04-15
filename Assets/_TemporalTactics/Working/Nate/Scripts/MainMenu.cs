@@ -6,6 +6,7 @@
 //-----------------------------------------------------------------------------
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using NaughtyAttributes;
 
 public class MainMenu : MonoBehaviour
 {
@@ -19,5 +20,33 @@ public class MainMenu : MonoBehaviour
         // This is an alternate way to do this dynamically based on the Build Settings list
         // REF: https://www.youtube.com/watch?v=zc8ac_qUXQY
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    private Vector3 dest;
+    void Start()
+    {
+        transform.localPosition = new Vector3(0,0,0);
+        dest = new Vector3(0,0,0);
+    }
+
+    void Update()
+    {
+        Vector3 error = dest - transform.localPosition;
+        if (error.magnitude > 0.1)
+        {
+            transform.localPosition = transform.localPosition + (error * Time.deltaTime * 5);
+        }
+    }
+
+    [Button]
+    public void Mainmenu()
+    {
+        dest = new Vector3(0,0,0);
+    }
+
+    [Button]
+    public void Submenu()
+    {
+        dest = new Vector3(0,200,0);
     }
 }

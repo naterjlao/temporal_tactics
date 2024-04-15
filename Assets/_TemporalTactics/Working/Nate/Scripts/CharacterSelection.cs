@@ -57,7 +57,18 @@ public class CharacterSelection : MonoBehaviour
     }
 
     [Button]
-    IEnumerator Next()
+    public void Next()
+    {
+        StartCoroutine(ENext());
+    }
+
+    [Button]
+    public void Prev()
+    {
+        StartCoroutine(EPrev());
+    }
+
+    IEnumerator ENext()
     {
         // Fly out
         flyRight();
@@ -76,8 +87,7 @@ public class CharacterSelection : MonoBehaviour
         flyMiddle();
     }
 
-    [Button]
-    IEnumerator Prev()
+    IEnumerator EPrev()
     {
         // Fly out
         flyLeft();
