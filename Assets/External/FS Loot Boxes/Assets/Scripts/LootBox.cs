@@ -217,9 +217,9 @@ public class LootBox : MonoBehaviour
 
         if (hasOpened == false)
         {
-            lootCounter.goldCount = lootCounter.goldCount + 300;
+            playerStats.goldCount = playerStats.goldCount + 300;
             hasOpened = true;
-            string goldCountStringUpdated = lootCounter.goldCount.ToString();
+            string goldCountStringUpdated = playerStats.goldCount.ToString();
             Debug.Log(goldCountStringUpdated);
         }
     }

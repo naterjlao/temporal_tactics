@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class lootCounter : MonoBehaviour
+public class playerStats : MonoBehaviour
 {
     // Creates a variable counter for amount of gold
     public static int goldCount;
@@ -14,7 +14,7 @@ public class lootCounter : MonoBehaviour
     void Start()
     {
         // Sets starting gold equal to the starting gold value
-        lootCounter.goldCount = startingCount;
+        playerStats.goldCount = startingCount;
 
         // Converts gold count to a string for debugging purposes
         string goldCountString = goldCount.ToString();
