@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: ee5d7783c29c2b145b5a127435e4aff8, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.3227964, g: 0.42099097, b: 0.5175752, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1202,16 +1202,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 411304140}
     m_Modifications:
-    - target: {fileID: 7443643703408505707, guid: 72ccbd9beaa6eec4da32a2f53c6ed4d0,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.004
-      objectReference: {fileID: 0}
-    - target: {fileID: 8967961577198972528, guid: 72ccbd9beaa6eec4da32a2f53c6ed4d0,
-        type: 3}
-      propertyPath: m_Name
-      value: GridTile tile_bump
-      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 20a7793e50d4120418130637c1fb0a35,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1261,6 +1251,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7443643703408505707, guid: 72ccbd9beaa6eec4da32a2f53c6ed4d0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.004
+      objectReference: {fileID: 0}
+    - target: {fileID: 8967961577198972528, guid: 72ccbd9beaa6eec4da32a2f53c6ed4d0,
+        type: 3}
+      propertyPath: m_Name
+      value: GridTile tile_bump
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 786895714325961655, guid: 72ccbd9beaa6eec4da32a2f53c6ed4d0, type: 3}
