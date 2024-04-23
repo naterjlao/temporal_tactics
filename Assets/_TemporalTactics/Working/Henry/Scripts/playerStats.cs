@@ -7,14 +7,24 @@ public class playerStats : MonoBehaviour
     // Creates a variable counter for amount of gold
     public static int goldCount;
 
+    // Holds the player's character selection
+    public static int characterSelection;
+
     // Sets the starting gold value
     public const int startingCount = 500;
+
+    void Awake()
+    {
+        // Keep ourselves alive even if we transition scenes.
+        DontDestroyOnLoad(this.gameObject);
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         // Sets starting gold equal to the starting gold value
         playerStats.goldCount = startingCount;
+        playerStats.characterSelection = 0;
 
         // Converts gold count to a string for debugging purposes
         string goldCountString = goldCount.ToString();
@@ -23,9 +33,10 @@ public class playerStats : MonoBehaviour
         Debug.Log(goldCountString);
     }
 
-    // Update is called once per frame
+#if false
     void Update()
     {
-        
+        Debug.Log($"goldCount: {goldCount}, characterSelection: {characterSelection}");
     }
+#endif
 }
