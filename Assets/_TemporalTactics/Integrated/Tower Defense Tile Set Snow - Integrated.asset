@@ -14,41 +14,68 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Base: {fileID: 174831509103936568, guid: e762b65875f2c66499a373047b57faec, type: 3}
   Standard: {fileID: 862703305227224779, guid: 605d26244e0d22342b089d03753bd1c5, type: 3}
-  Bump: {fileID: 0}
-  CornerInner: {fileID: 0}
-  CornerLarge: {fileID: 0}
-  CornerOuter: {fileID: 0}
-  CornerRound: {fileID: 0}
-  CornerSquare: {fileID: 0}
-  Crossing: {fileID: 0}
-  Crystal: {fileID: 0}
-  Dirt: {fileID: 0}
-  DirtHigh: {fileID: 0}
-  End: {fileID: 0}
-  EndRound: {fileID: 0}
-  EndRoundSpawn: {fileID: 0}
-  EndSpawn: {fileID: 0}
-  Hill: {fileID: 0}
-  RiverBridge: {fileID: 0}
-  RiverCorner: {fileID: 0}
-  RiverFall: {fileID: 0}
-  RiverSlope: {fileID: 0}
-  RiverSlopeLarge: {fileID: 0}
-  RiverStraight: {fileID: 0}
-  RiverTransition: {fileID: 0}
-  Rock: {fileID: 0}
-  Slope: {fileID: 0}
-  Spawn: {fileID: 0}
-  SpawnRound: {fileID: 0}
-  Split: {fileID: 0}
-  Straight: {fileID: 0}
-  StraightHill: {fileID: 0}
-  StraightHillLarge: {fileID: 0}
-  Transition: {fileID: 0}
-  Tree: {fileID: 0}
-  TreeDouble: {fileID: 0}
-  TreeQuad: {fileID: 0}
-  wideCorner: {fileID: 0}
-  wideSplit: {fileID: 0}
-  wideStraight: {fileID: 0}
-  wideTransition: {fileID: 0}
+  Bump: {fileID: 5658734652206958519, guid: c260b23d59136f645a41f1e5a79ab3bc, type: 3}
+  CornerInner: {fileID: 4141575220638097885, guid: 1dd88a9960600a845bd12a09eb2b286d,
+    type: 3}
+  CornerLarge: {fileID: 1443384141190072953, guid: 1b02b41a4cd8af740959144e3605e9bb,
+    type: 3}
+  CornerOuter: {fileID: 8827522326873906338, guid: 2bc403640d920264f9b6165b1bb54a3e,
+    type: 3}
+  CornerRound: {fileID: 8757332097531459473, guid: 9931a27469b8bbb42a0787d4a664a64a,
+    type: 3}
+  CornerSquare: {fileID: 4824868032087387490, guid: 880308c76b5336f47a762c2a25f6a887,
+    type: 3}
+  Crossing: {fileID: 7510739349878815743, guid: 14a51b47df6e552449f6f631156758ea,
+    type: 3}
+  Crystal: {fileID: 8263838854316777206, guid: 7ebeacde3751b5d40ba5caf861c275f1, type: 3}
+  Dirt: {fileID: 6606955751471229075, guid: 09e11cf31c8d0ed478ad720afb4de575, type: 3}
+  DirtHigh: {fileID: 5802935250561921919, guid: 3dd816b461ccb8d4f998330fb631d1ff,
+    type: 3}
+  End: {fileID: 2024492418103215292, guid: 55bfcdf6ba9118a428b63749718a6db5, type: 3}
+  EndRound: {fileID: 6375512635980272735, guid: aea15a8cd555749489bc0435da74ab3d,
+    type: 3}
+  EndRoundSpawn: {fileID: 7032700733155526122, guid: c3887c9fed4e5f244bf26c4a2b54927e,
+    type: 3}
+  EndSpawn: {fileID: 2036312899407448273, guid: 0ca67ca9938495142a27fc16006dd078,
+    type: 3}
+  Hill: {fileID: 5619465045132447653, guid: 767102ffd7c33814eb967555089b7fc7, type: 3}
+  RiverBridge: {fileID: 2855429522805110129, guid: 2e235852af69c3246b0bdea65d39b6c9,
+    type: 3}
+  RiverCorner: {fileID: 2282621455688346935, guid: 5f9851033ff544f42a838a587c0dc3a3,
+    type: 3}
+  RiverFall: {fileID: 7239793591169623702, guid: 122fc522dc766a74dbeffdd249dd26e1,
+    type: 3}
+  RiverSlope: {fileID: 6842348752428820838, guid: 6a82648a5d79bda45b066769122eb125,
+    type: 3}
+  RiverSlopeLarge: {fileID: 6694776736336935133, guid: b448b017e3c0db049842f50e007a2f7d,
+    type: 3}
+  RiverStraight: {fileID: 236482961795697835, guid: ee09eb35f60c17a43b7e84070fbaee9b,
+    type: 3}
+  RiverTransition: {fileID: 225561367206472120, guid: 9add229bb4b1c604dbb7d0a94f30c107,
+    type: 3}
+  Rock: {fileID: 80572923417343632, guid: 6ecd136a0b02ef842bbc3571f2aba703, type: 3}
+  Slope: {fileID: 4609445355135016399, guid: 27d2c22190ca15c44a437a24e216cea4, type: 3}
+  Spawn: {fileID: 7158015679610967260, guid: a11669823c4bbec459ef906e55182df3, type: 3}
+  SpawnRound: {fileID: 6393179196910736089, guid: 457fc6a18e5f3444a935af568b828129,
+    type: 3}
+  Split: {fileID: 2790170073283160289, guid: 986406a8d6cb4174eafdb47fc09b1387, type: 3}
+  Straight: {fileID: 554350593184658644, guid: de47d8824b2f35446b86300818a61dba, type: 3}
+  StraightHill: {fileID: 8195631294509806582, guid: 5f6df71eb801eca4aaabd08cf1200d93,
+    type: 3}
+  StraightHillLarge: {fileID: 3741324302572917098, guid: a0dfbc4b9cad0fb43b12261253219843,
+    type: 3}
+  Transition: {fileID: 6716332089427734122, guid: d253cbfad3baeeb4ca617977e31eb511,
+    type: 3}
+  Tree: {fileID: 4410591580216802590, guid: e6cab2a7ebddb904c996300018938254, type: 3}
+  TreeDouble: {fileID: 8756966230445460860, guid: cd69ad1a65d25fb49a01a8250ad00f89,
+    type: 3}
+  TreeQuad: {fileID: 9021073575661679596, guid: 777e49ed3783abc439ace6a9c5146958,
+    type: 3}
+  WideCorner: {fileID: 4409248862688770694, guid: 101d218ada9734447821c29b6a66aabf,
+    type: 3}
+  WideSplit: {fileID: 3498517768411775540, guid: fc578761c7184bf438a2040a5db0f472,
+    type: 3}
+  WideStraight: {fileID: 1345237014616498691, guid: c5866104264a8154fbc06ab798acba3b,
+    type: 3}
+  WideTransition: {fileID: 4119534314877257034, guid: cc23747ebaba91646a69fc9a57094375,
+    type: 3}

@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22b8d854535bc1641b12adc3b6b664e2, type: 3}
+  m_Name: Space Kit Tile Set
+  m_EditorClassIdentifier: 
+  Base: {fileID: 174831509103936568, guid: e762b65875f2c66499a373047b57faec, type: 3}
+  Standard: {fileID: 4000161494242694206, guid: c1dcc7dcd6a77254fa888613b5b3269f,
+    type: 3}
+  Bump: {fileID: 0}
+  CornerInner: {fileID: 7200904947988213477, guid: d19d26a4887f76c4f85affa51af011c1,
+    type: 3}
+  CornerLarge: {fileID: 0}
+  CornerOuter: {fileID: 3789918809381619951, guid: 76b9270c6d54e574687eeac2941407af,
+    type: 3}
+  CornerRound: {fileID: 6880368937782175087, guid: 0dcd4cc84b1846f43986a1eff9b68c5c,
+    type: 3}
+  CornerSquare: {fileID: 8591070725811273872, guid: 69e83a7d1f7f25a48a42a282a123f660,
+    type: 3}
+  Crossing: {fileID: 0}
+  Crystal: {fileID: 0}
+  Dirt: {fileID: 5396683595469899681, guid: aeec07cd409e7214191f548e30808799, type: 3}
+  DirtHigh: {fileID: 4699542439587413388, guid: e06b5e43e1b5a464491acadee7a70780,
+    type: 3}
+  End: {fileID: 0}
+  EndRound: {fileID: 4077992081931932625, guid: a4812c58b743fb1448394aeed58d2c21,
+    type: 3}
+  EndRoundSpawn: {fileID: 0}
+  EndSpawn: {fileID: 0}
+  Hill: {fileID: 6184621478899558583, guid: 75244f2acf009d644a75b69ef1770145, type: 3}
+  RiverBridge: {fileID: 8964822204107878537, guid: 1828a189062336f4ba92216943b5d12c,
+    type: 3}
+  RiverCorner: {fileID: 7061578658335861339, guid: ac1d34ad39c55d24a89c3a64a88d6bfe,
+    type: 3}
+  RiverFall: {fileID: 0}
+  RiverSlope: {fileID: 0}
+  RiverSlopeLarge: {fileID: 0}
+  RiverStraight: {fileID: 1916815194314178633, guid: ef97662b36267fe42bbb64901113af17,
+    type: 3}
+  RiverTransition: {fileID: 6395732318410510357, guid: a70c5aeafcc77104bb625616167c6d21,
+    type: 3}
+  Rock: {fileID: 0}
+  Slope: {fileID: 2186075424046001099, guid: 0c657ff4959daad46bbe86be94212ec0, type: 3}
+  Spawn: {fileID: 0}
+  SpawnRound: {fileID: 0}
+  Split: {fileID: 8242739835964023553, guid: 68ef5c85c78343c4bbd578ebc150b458, type: 3}
+  Straight: {fileID: 8755551370854850522, guid: c8f6d3c5cb241d44ca0a5e8426196b86,
+    type: 3}
+  StraightHill: {fileID: 458924982943977351, guid: ed4955c5d4231274cb39795e31633956,
+    type: 3}
+  StraightHillLarge: {fileID: 7911179407610037367, guid: b6e2d02339e3c7b4d92a64abd2c679f0,
+    type: 3}
+  Transition: {fileID: 0}
+  Tree: {fileID: 0}
+  TreeDouble: {fileID: 0}
+  TreeQuad: {fileID: 0}
+  WideCorner: {fileID: 0}
+  WideSplit: {fileID: 0}
+  WideStraight: {fileID: 0}
+  WideTransition: {fileID: 0}
