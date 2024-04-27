@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OverworldCamera : MonoBehaviour
 {
-    public GameObject target;
+    public Player target;
     public float TrackingSpeed = 10.0f;
 
     private Vector3 initial_position;
@@ -26,9 +26,9 @@ public class OverworldCamera : MonoBehaviour
     {
         Vector3 panning = initial_position.z * 
             new Vector3(
-                Mathf.Sin(target.transform.eulerAngles.y / 180f * Mathf.PI),
+                Mathf.Sin(target.Heading / 180f * Mathf.PI),
                 0f,
-                Mathf.Cos(target.transform.eulerAngles.y / 180f * Mathf.PI));
+                Mathf.Cos(target.Heading / 180f * Mathf.PI));
 
         Vector3 target_position = Vector3.Scale(target.transform.position, TRACK_MASK) // Track x,z
             + new Vector3(0, target.transform.position.y + initial_position.y, 0)
@@ -40,6 +40,6 @@ public class OverworldCamera : MonoBehaviour
 
     private void update_rotation()
     {
-        transform.eulerAngles = new Vector3(transform.eulerAngles.x, target.transform.eulerAngles.y, transform.eulerAngles.z);
+        transform.eulerAngles = new Vector3(transform.eulerAngles.x, target.Heading, transform.eulerAngles.z);
     }
 }

@@ -11,6 +11,12 @@ public class Player : MonoBehaviour
     private Animator animator;
     private int movement_speed_hash;
 
+    private float heading;
+    public float Heading
+    {
+        get { return heading;}
+    }
+
     public float BaseSpeed = 1f;
     public float TurnSpeed = 5f;
     public float AxisThreshold = .5f;
@@ -32,6 +38,9 @@ public class Player : MonoBehaviour
 
         // Get the controller.
         controller = GetComponent<CharacterController>();
+
+        // Set the initial heading
+        heading = transform.eulerAngles.y;
     }
 
     // Update is called once per frame
@@ -40,19 +49,19 @@ public class Player : MonoBehaviour
         // Technically, this is a keyboard only game - so this might not be necessary
         float h_axis = Input.GetAxis("Horizontal");
         float v_axis = Input.GetAxis("Vertical");
-        int command_speed = calculate_speed(h_axis, v_axis);
+        int command_speed = calculate_speed(v_axis);
 
         update_gravity();
         update_movement(v_axis, command_speed);
-        update_rotation(h_axis);
+        update_rotation(h_axis, command_speed);
         update_animation(command_speed);
     }
 
-    private int calculate_speed(float h_axis, float v_axis)
+    private int calculate_speed(float v_axis)
     {
         // Calculate movement speed - only run if we are walking.
         int command_speed = 0;
-        if ((Math.Abs(h_axis) > AxisThreshold) || (Math.Abs(v_axis) > AxisThreshold))
+        if (Math.Abs(v_axis) > AxisThreshold)
         {
             command_speed += 1;
             if (Input.GetKey("space"))
@@ -77,10 +86,13 @@ public class Player : MonoBehaviour
         controller.Move(move * Time.deltaTime * BaseSpeed * command_speed);
     }
 
-    private void update_rotation(float h_axis)
+    private void update_rotation(float h_axis, int command_speed)
     {
-        float heading = transform.rotation.eulerAngles.y + h_axis * TurnSpeed;
-        transform.DORotateQuaternion(Quaternion.Euler(0,heading,0), 0.5f);
+        heading = heading + h_axis * TurnSpeed * Time.deltaTime;
+        if (command_speed > 0)
+            transform.DORotateQuaternion(Quaternion.Euler(0,heading,0), 0.5f);
+        //float heading = transform.rotation.eulerAngles.y + h_axis * TurnSpeed;
+        //transform.DORotateQuaternion(Quaternion.Euler(0,heading,0), 0.5f);
     }
 
     private void update_animation(int command_speed)
