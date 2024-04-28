@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3835108566033242393}
   - component: {fileID: 3498810617412902656}
   - component: {fileID: 7985411905412439491}
-  - component: {fileID: 408036562582296189}
+  - component: {fileID: 1726357612365702469}
   m_Layer: 5
   m_Name: TextPrompt
   m_TagString: Untagged
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &408036562582296189
+--- !u!114 &1726357612365702469
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,7 +116,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e200d416c6140bc43af263bdd381e8c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prompt: 
+  camera: {fileID: 0}
+  CharacterDelay: 0
+  Prompt:
+  - Text: I AM ERROR
+    LineDelay: 2
+  - Text: ...JUST KIDDING!
+    LineDelay: 0
+  - Text: BLAH BLAH BLAH BLAH....
+    LineDelay: 0
+  - Text: THANKS!
+    LineDelay: 0
+  TextObject: {fileID: 7036998419420630964}
+  PanelObject: {fileID: 8809123791196034769}
 --- !u!1 &7036998419420630964
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,7 +273,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6508732116099901826}
   - component: {fileID: 2589092735410144817}
-  - component: {fileID: 5638363534892825321}
+  - component: {fileID: 2272428028414450971}
+  - component: {fileID: 4470000724836653104}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -316,8 +329,22 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1.33, z: 0}
---- !u!65 &5638363534892825321
-BoxCollider:
+--- !u!114 &2272428028414450971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7837492651297999437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da0460b50524f647ac9ad981fbc9da7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  textPrompt: {fileID: 1726357612365702469}
+--- !u!136 &4470000724836653104
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -334,8 +361,10 @@ BoxCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5, y: 1, z: 5}
+  serializedVersion: 2
+  m_Radius: 3.5
+  m_Height: 8
+  m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &8809123791196034769
 GameObject:
