@@ -215,7 +215,7 @@ public class LootBox : MonoBehaviour
 
         // check if chest has been previously opened, and add gold if not
 
-        if (hasOpened == false)
+        if ((hasOpened == false) && (collision.gameObject.tag == playerTag))
         {
             playerStats.goldCount = playerStats.goldCount + 300;
             hasOpened = true;

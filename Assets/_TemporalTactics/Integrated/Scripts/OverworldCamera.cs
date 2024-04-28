@@ -35,7 +35,7 @@ public class OverworldCamera : MonoBehaviour
             + panning;
 
         Vector3 error = transform.position - target_position;
-        transform.position = transform.position - TrackingSpeed * error * Time.deltaTime;
+        transform.position = target_position;
     }
 
     private void update_rotation()

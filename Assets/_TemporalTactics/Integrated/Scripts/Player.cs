@@ -88,7 +88,8 @@ public class Player : MonoBehaviour
 
     private void update_rotation(float h_axis, int command_speed)
     {
-        heading = heading + h_axis * TurnSpeed * Time.deltaTime;
+        if (Math.Abs(h_axis) > AxisThreshold)
+            heading = heading + h_axis * TurnSpeed * Time.deltaTime;
         if (command_speed > 0)
             transform.DORotateQuaternion(Quaternion.Euler(0,heading,0), 0.5f);
         //float heading = transform.rotation.eulerAngles.y + h_axis * TurnSpeed;

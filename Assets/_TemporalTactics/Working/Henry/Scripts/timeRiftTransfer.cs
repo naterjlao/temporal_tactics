@@ -8,7 +8,10 @@ using UnityEngine.SceneManagement;
 
 public class timeRiftTransfer : MonoBehaviour
 {
-
+    /// <summary>
+    /// Make sure to update Build Settings -> Scenes to Build!
+    /// </summary>
+    public string destination = null;
     // Start and Update methods have been deleted
 
     // Note to self: make sure "Is Trigger" is checked on at least one collider!
@@ -19,9 +22,10 @@ public class timeRiftTransfer : MonoBehaviour
             // Debug to confirm collision
             Debug.Log("Collision detected");
 
-            // Switches scene (scene must be added to build settings
-            // String must match scene title
-            SceneManager.LoadScene("levelOne");
+            if (destination != null)
+                // Switches scene (scene must be added to build settings
+                // String must match scene title
+                SceneManager.LoadScene(destination);
         }
     }
 }

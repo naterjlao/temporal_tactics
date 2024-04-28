@@ -7,6 +7,9 @@ public class playerStats : MonoBehaviour
     // Creates a variable counter for amount of gold
     public static int goldCount;
 
+    // Player's Health from 0.0-100.0%
+    public static float health;
+
     // Holds the player's character selection
     public static int characterSelection;
 
@@ -25,6 +28,7 @@ public class playerStats : MonoBehaviour
         // Sets starting gold equal to the starting gold value
         playerStats.goldCount = startingCount;
         playerStats.characterSelection = 0;
+        playerStats.health = 100.0f;
 
         // Converts gold count to a string for debugging purposes
         string goldCountString = goldCount.ToString();

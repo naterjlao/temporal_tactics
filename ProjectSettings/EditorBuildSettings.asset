@@ -12,9 +12,12 @@ EditorBuildSettings:
     path: Assets/_TemporalTactics/Working/Wade/Scenes/Overworld.unity
     guid: 6e113320b95ffdf4681300d7b110715e
   - enabled: 1
-    path: Assets/_TemporalTactics/Integrated/Scenes/Hello World Cube.unity
-    guid: c02a49555ca0d39469f3d1ec564aef95
-  - enabled: 1
     path: Assets/_TemporalTactics/Working/Henry/Scenes/levelOne.unity
     guid: 242400441ef3a3646aba595e788f19ff
+  - enabled: 1
+    path: Assets/_TemporalTactics/Working/Wade/Scenes/Water Level - Wade.unity
+    guid: 6397c79b00446f545a5b89296feda906
+  - enabled: 1
+    path: Assets/_TemporalTactics/Working/Wade/Scenes/Snow Level.unity
+    guid: e41724aa1bf96624580d2d21ff5bfb39
   m_configObjects: {}
