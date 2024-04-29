@@ -21,14 +21,15 @@ public class NPC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.DORotateQuaternion(looking_direction, 0.5f);
+        // transform.DORotateQuaternion(looking_direction, 0.5f);
+        transform.rotation = looking_direction;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject == player)
         {
-            looking_direction = Quaternion.LookRotation( other.gameObject.transform.position - transform.position);
+            looking_direction = Quaternion.LookRotation(other.gameObject.transform.position - transform.position);
             textPrompt.Show();
         }
     }

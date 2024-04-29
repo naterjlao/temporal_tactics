@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     private float heading;
     public float Heading
     {
-        get { return heading;}
+        get { return heading; }
     }
 
     public float BaseSpeed = 1f;
@@ -74,7 +74,7 @@ public class Player : MonoBehaviour
     {
         if (!controller.isGrounded)
         {
-            Vector3 fall = new Vector3(0,1,0) * Gravity;
+            Vector3 fall = new Vector3(0, 1, 0) * Gravity;
             controller.Move(fall * Time.deltaTime);
         }
     }
@@ -91,7 +91,9 @@ public class Player : MonoBehaviour
         if (Math.Abs(h_axis) > AxisThreshold)
             heading = heading + h_axis * TurnSpeed * Time.deltaTime;
         if (command_speed > 0)
-            transform.DORotateQuaternion(Quaternion.Euler(0,heading,0), 0.5f);
+            transform.rotation = Quaternion.Euler(0, heading, 0);
+        // transform.DORotateQuaternion(Quaternion.Euler(0, heading, 0), 0.5f);
+
         //float heading = transform.rotation.eulerAngles.y + h_axis * TurnSpeed;
         //transform.DORotateQuaternion(Quaternion.Euler(0,heading,0), 0.5f);
     }
