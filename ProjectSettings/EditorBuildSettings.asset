@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_TemporalTactics/Working/Wade/Scenes/Snow Level.unity
     guid: e41724aa1bf96624580d2d21ff5bfb39
+  - enabled: 1
+    path: Assets/_TemporalTactics/Working/Henry/Scenes/levelTwo.unity
+    guid: 1955e47cd0c552742be1d9290cc140b2
   m_configObjects: {}
