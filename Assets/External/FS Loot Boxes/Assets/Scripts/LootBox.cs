@@ -22,6 +22,11 @@ public class Loot
     /// </summary>
     [Range(0,1)] public float dropChance;
 }
+public class Chest
+{
+    public GameObject chest;
+}
+
 
 /// <summary>
 /// These are the ways you can open the box.
@@ -75,6 +80,10 @@ public class LootBox : MonoBehaviour
     /// </summary>
     /// <value><c>true</c> if is open; otherwise, <c>false</c>.</value>
     public bool isOpen { get; set; }
+
+    // creates a list of opened chests
+
+    public static List<Chest> openedChests = new List<Chest>();
 
     // creates a boolean variable to determine if chest has been opened
 
@@ -211,6 +220,9 @@ public class LootBox : MonoBehaviour
 
             // otherwise, open the box.
             else Open();
+
+            // debugs "chest has opened" upon opening chest
+            Debug.Log("Chest has opened");
         }
 
         // check if chest has been previously opened, and add gold if not
