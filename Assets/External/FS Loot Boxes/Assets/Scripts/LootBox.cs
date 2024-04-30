@@ -38,6 +38,12 @@ public enum OpeningMethods { OpenOnCollision, OpenOnKeyPress, OpenOnTouch }
 /// </summary>
 public class LootBox : MonoBehaviour
 {
+    // list to store previously opened loot boxes
+    public static List<LootBox> openedChests = new List<LootBox>();
+
+    // flag to check if the chest has previously been opened
+    private bool hasBeenOpened = false;
+
     /// <summary>
     /// How should the player open the box?
     /// </summary>
@@ -81,14 +87,6 @@ public class LootBox : MonoBehaviour
     /// <value><c>true</c> if is open; otherwise, <c>false</c>.</value>
     public bool isOpen { get; set; }
 
-    // creates a list of opened chests
-
-    public static List<Chest> openedChests = new List<Chest>();
-
-    // creates a boolean variable to determine if chest has been opened
-
-    public bool hasOpened;
-
     /// <summary>
     /// The box animator for leaping, open and close animations.
     /// </summary>
@@ -103,10 +101,6 @@ public class LootBox : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // at start, declares that chest has not yet been opened
-
-        hasOpened = false;
-
         // gets the animator
         animator = GetComponent<Animator>();
 
@@ -150,32 +144,20 @@ public class LootBox : MonoBehaviour
         // play the open animation
         if (animator) animator.Play("Open");
 
-        // calculates the chance of each loot inside the box
-        // and pupulates a list with all received treasures
-
-        // creates a temp list to store the earned items
-        List<GameObject> loots = new List<GameObject>();
-
-        // check each prize in this box
-        foreach (Loot loot in boxContents)
+        // checks to see if the chest has previously been opened
+        if (!hasBeenOpened)
         {
-            // roll the dice for a chance to win
-            float chance = UnityEngine.Random.Range(0.0f, 1.0f);
+            // add gold to the player's gold count
+            playerStats.goldCount += 300;
+            string goldCountStringUpdated = playerStats.goldCount.ToString();
+            Debug.Log(goldCountStringUpdated);
 
-            // if win add the item to the temp list
-            if (loot.dropChance >= chance)
-            {
-                // Debug.Log("You got " + loot.loot.name);
-                loots.Add(loot.loot);
-            }
+            // add this chest to the list of chests that have been opened
+            openedChests.Add(this);
+
+            // mark the chest as opened
+            hasBeenOpened = true;
         }
-
-        // empty the box
-        boxContents.Clear();
-
-        // calls the OnBoxOpen event and deliver the
-        // earned GameObjects on temp list
-        OnBoxOpen?.Invoke(loots.ToArray());
     }
 
     /// <summary>
@@ -220,19 +202,6 @@ public class LootBox : MonoBehaviour
 
             // otherwise, open the box.
             else Open();
-
-            // debugs "chest has opened" upon opening chest
-            Debug.Log("Chest has opened");
-        }
-
-        // check if chest has been previously opened, and add gold if not
-
-        if ((hasOpened == false) && (collision.gameObject.tag == playerTag))
-        {
-            playerStats.goldCount = playerStats.goldCount + 300;
-            hasOpened = true;
-            string goldCountStringUpdated = playerStats.goldCount.ToString();
-            Debug.Log(goldCountStringUpdated);
         }
     }
 
@@ -242,9 +211,6 @@ public class LootBox : MonoBehaviour
     /// <param name="collision">Collision.</param>
     private void OnCollisionExit(Collision collision)
     {
-        // debugs "chest has closed" upon closing chest
-        Debug.Log("Chest has closed");
-
         // flag the player as away.
         isPlayerAround = false;
 
