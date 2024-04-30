@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using DG.Tweening;
+using System.Drawing.Drawing2D;
 
 public class Player : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class Player : MonoBehaviour
     public float TurnSpeed = 5f;
     public float AxisThreshold = .5f;
     public float Gravity = -9.8f;
+    public float DashFactor = 2.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -83,7 +85,8 @@ public class Player : MonoBehaviour
     {
         Vector3 move = new Vector3(0, 0, v_axis);
         move = transform.TransformDirection(move);
-        controller.Move(move * Time.deltaTime * BaseSpeed * command_speed);
+        controller.Move(move * Time.deltaTime * BaseSpeed *
+            (command_speed < 2 ? command_speed : DashFactor));
     }
 
     private void update_rotation(float h_axis, int command_speed)
@@ -91,11 +94,10 @@ public class Player : MonoBehaviour
         if (Math.Abs(h_axis) > AxisThreshold)
             heading = heading + h_axis * TurnSpeed * Time.deltaTime;
         if (command_speed > 0)
-            transform.rotation = Quaternion.Euler(0, heading, 0);
-        // transform.DORotateQuaternion(Quaternion.Euler(0, heading, 0), 0.5f);
-
-        //float heading = transform.rotation.eulerAngles.y + h_axis * TurnSpeed;
-        //transform.DORotateQuaternion(Quaternion.Euler(0,heading,0), 0.5f);
+        {
+            Quaternion qheading = Quaternion.Euler(0, heading, 0);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, qheading, 540 * Time.deltaTime);
+        }
     }
 
     private void update_animation(int command_speed)
