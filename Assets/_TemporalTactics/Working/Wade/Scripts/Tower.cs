@@ -13,10 +13,10 @@ public class Tower : MonoBehaviour
     [SerializeField] Vector2 yAngleBounds;
     [SerializeField] Transform yPivot;
     [SerializeField] SphereCollider sphereCollider;
-    [SerializeField][Expandable] TowerData Data;
+    [SerializeField][Expandable] public TowerData Data;
 
     [Header("Ammo")]
-    [SerializeField] TowerAmmo AmmoPrefab;
+    [SerializeField] public TowerAmmo AmmoPrefab;
     [SerializeField] Transform FirePoint;
 
     bool canFire = true;

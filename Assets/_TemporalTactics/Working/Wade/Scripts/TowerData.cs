@@ -10,4 +10,5 @@ public class TowerData : ScriptableObject
     public float FireForce;
     public float Radius;
     public float Cost;
+    public Sprite icon;
 }

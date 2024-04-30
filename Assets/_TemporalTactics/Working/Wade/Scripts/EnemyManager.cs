@@ -11,6 +11,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] SplineComputer _splineComputer;
     [SerializeField] Vector2 xOffset = new Vector2(-0.2f, 0.2f);
     [SerializeField][Expandable] LevelEnemies levelEnemies;
+    [SerializeField] TowerDefenseUI towerDefenseUI;
 
     int enemyCounter = 0;
     float totalHealth = 0;
@@ -85,11 +86,15 @@ public class EnemyManager : MonoBehaviour
         healthDestroyed += health;
 
         var progress = GetProgress();
-        print($"Progress: {progress:F0}%");
+
+        // print($"Progress: {progress:F0}%");
+        towerDefenseUI.UpdateProgress(progress);
 
         if (progress >= 100)
         {
             Debug.Log("LEVEL COMPLETED!");
+
+            // todo: tween in results
         }
     }
 

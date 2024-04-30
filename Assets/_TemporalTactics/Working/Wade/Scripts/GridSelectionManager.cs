@@ -35,6 +35,8 @@ public class GridSelectionManager : MonoBehaviour
     public UnityEvent OnGridHover;
     public UnityEvent OnGridSelected;
     public UnityEvent OnGridUnselected;
+    public UnityEvent<GameObject> OnGridSelectedGO;
+    public UnityEvent<GameObject> OnGridUnselectedGO;
 
 
     void Start()
@@ -50,6 +52,8 @@ public class GridSelectionManager : MonoBehaviour
             _selectionMeshRenderer.material.color = SelectionColor;
 
             OnGridSelected.Invoke();
+
+
         };
 
         selectAction.canceled += ctx =>
@@ -57,6 +61,8 @@ public class GridSelectionManager : MonoBehaviour
             _selectionMeshRenderer.material.color = StandardColor;
 
             OnGridUnselected.Invoke();
+
+            // if (_selectionObject) OnGridUnselectedGO.Invoke(GetSelectedTransform());
         };
     }
 
@@ -67,7 +73,7 @@ public class GridSelectionManager : MonoBehaviour
         ray = _mainCam.ScreenPointToRay(Input.mousePosition);
 
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, placementLayers) && !EventSystem.current.IsPointerOverGameObject())
+        if (Physics.Raycast(ray, out hit, 100, placementLayers) && !EventSystem.current.IsPointerOverGameObject())
         {
             _lastPosition = hit.point;
             _selectedObject = hit.collider.gameObject;
@@ -81,6 +87,11 @@ public class GridSelectionManager : MonoBehaviour
             }
 
             OnGridHover.Invoke();
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (_selectionObject) OnGridSelectedGO.Invoke(_selectedObject);
+            }
         }
         else
         {
