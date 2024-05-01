@@ -15,5 +15,5 @@ MonoBehaviour:
   Speed: 1.25
   Health: 125
   Damage: 100
-  SpawnCooldown: 1.5
+  SpawnCooldown: 3
   GoldAmount: 25
