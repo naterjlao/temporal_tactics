@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a2c8700d77c5a84b95633dcb5318b64, type: 3}
   m_Name: Level Three Enemies
   m_EditorClassIdentifier: 
-  Enemies: []
+  Enemies:
+  - {fileID: 3123322220799357906, guid: fd2e3e1df37092945beae2c48a2f2102, type: 3}
+  - {fileID: 3123322220799357906, guid: a11fa098ccb035d4eba0c2c3ce241b50, type: 3}
+  - {fileID: 3123322220799357906, guid: a11fa098ccb035d4eba0c2c3ce241b50, type: 3}
+  - {fileID: 3123322220799357906, guid: a11fa098ccb035d4eba0c2c3ce241b50, type: 3}
+  - {fileID: 3123322220799357906, guid: fd2e3e1df37092945beae2c48a2f2102, type: 3}

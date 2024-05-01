@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fedaaf979f984f4684d36b1238685c4, type: 3}
-  m_Name: Cannon
+  m_Script: {fileID: 11500000, guid: a8ff4d80b06d5034fb04e929585d1ea9, type: 3}
+  m_Name: Pirate Large
   m_EditorClassIdentifier: 
-  RateOfFire: 4
-  FireForce: 20
-  Radius: 4
-  Cost: 500
-  icon: {fileID: 21300000, guid: ceaf0dfa3752b9344ac9c2d2539909e4, type: 3}
+  Speed: 0.35
+  Health: 750
+  Damage: 500
+  SpawnCooldown: 12
+  GoldAmount: 250

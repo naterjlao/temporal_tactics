@@ -99,8 +99,17 @@ public class GridSelectionManager : MonoBehaviour
             _lastPosition = hit.point;
             _selectedObject = hit.collider.gameObject;
 
-            _selectionValue = _grid.WorldToCell(_lastPosition + mouseOffset);
-            _selectionObject.position = _grid.CellToWorld(_selectionValue);
+
+            if (!_grid)
+            {
+                // _selectionObject.position = hit.collider.transform.position;
+                _selectionObject.SetPositionAndRotation(hit.collider.transform.position, hit.collider.transform.rotation);
+            }
+            else
+            {
+                _selectionValue = _grid.WorldToCell(_lastPosition + mouseOffset);
+                _selectionObject.position = _grid.CellToWorld(_selectionValue);
+            }
 
             if (!_selectionObject.gameObject.activeSelf)
             {
