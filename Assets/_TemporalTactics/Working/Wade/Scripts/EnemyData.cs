@@ -8,4 +8,5 @@ public class EnemyData : ScriptableObject
     public float Health;
     public float Damage;
     public float SpawnCooldown;
+    public int GoldAmount;
 }

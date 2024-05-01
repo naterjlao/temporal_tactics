@@ -18,6 +18,8 @@ public class Enemy : MonoBehaviour
 
     Tween enemyTweenerScale, enemyTweenerSpeed;
 
+    bool isDestroyed = false;
+
     void Start()
     {
         name = Data.name;
@@ -66,11 +68,15 @@ public class Enemy : MonoBehaviour
 
     public void Damage(float amount)
     {
+        if (isDestroyed) return;
+
         CurrentHealth -= amount;
 
         if (CurrentHealth <= 0)
         {
-            GetComponentInParent<EnemyManager>().EnemyDestroyed(Data.Health);
+            isDestroyed = true;
+
+            GetComponentInParent<EnemyManager>().EnemyDestroyed(Data.Health, Data.GoldAmount);
             ScaleOut();
         }
     }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Base : MonoBehaviour
 {
+    [SerializeField] AudioClip failSound;
     [SerializeField] TowerDefenseUI towerDefenseUI;
     public float Health;
 
@@ -24,7 +25,7 @@ public class Base : MonoBehaviour
 
     public void LoseHealth(float amount)
     {
-        Health -= amount;
+        Health = Mathf.Max(0, Health - amount);
 
         // print($"Base Health: {Health}");
 
@@ -34,9 +35,12 @@ public class Base : MonoBehaviour
         {
             Debug.Log("BASE HAS BEEN DESTROYED");
 
-            //todo:  tween in results 
+            towerDefenseUI.LevelFailed();
 
-            Time.timeScale = 0;
+            // todo play tower fail sound
+            // audioSource.PlayOneShot(failSound);
+
+            // Time.timeScale = 0;
         }
     }
 }

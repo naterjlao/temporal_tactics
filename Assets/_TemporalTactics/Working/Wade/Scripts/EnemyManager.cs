@@ -7,11 +7,13 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
+    [SerializeField] AudioClip destroySound, completionSound;
     [SerializeField] Enemy enemy;
     [SerializeField] SplineComputer _splineComputer;
     [SerializeField] Vector2 xOffset = new Vector2(-0.2f, 0.2f);
     [SerializeField][Expandable] LevelEnemies levelEnemies;
     [SerializeField] TowerDefenseUI towerDefenseUI;
+    [SerializeField] TowerDefenseGoldManager goldManager;
 
     int enemyCounter = 0;
     float totalHealth = 0;
@@ -81,9 +83,13 @@ public class EnemyManager : MonoBehaviour
         return levelEnemies.Enemies.Count - enemyCounter;
     }
 
-    public void EnemyDestroyed(float health)
+    public void EnemyDestroyed(float health, int gold)
     {
         healthDestroyed += health;
+        goldManager.UpdateGold(gold);
+
+        // todo play tower destroy sound
+        // audioSource.PlayOneShot(destroySound);
 
         var progress = GetProgress();
 
@@ -94,7 +100,10 @@ public class EnemyManager : MonoBehaviour
         {
             Debug.Log("LEVEL COMPLETED!");
 
-            // todo: tween in results
+            towerDefenseUI.LevelCompleted();
+
+            // todo play tower completed sound
+            // audioSource.PlayOneShot(completedSound);
         }
     }
 

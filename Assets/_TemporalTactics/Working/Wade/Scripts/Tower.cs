@@ -17,6 +17,7 @@ public class Tower : MonoBehaviour
 
     [Header("Ammo")]
     [SerializeField] public TowerAmmo AmmoPrefab;
+    [SerializeField] AudioClip fireSound;
     [SerializeField] Transform FirePoint;
 
     bool canFire = true;
@@ -90,6 +91,9 @@ public class Tower : MonoBehaviour
 
         // Apply force to the projectile in the forward direction
         newAmmo.Rigidbody.AddForce(FirePoint.forward * Data.FireForce, ForceMode.Impulse);
+
+        // todo Add Fire Sound
+        // audioSource.PlayOneShot(fireSound);
 
         StartCoroutine(FireCooldown());
     }

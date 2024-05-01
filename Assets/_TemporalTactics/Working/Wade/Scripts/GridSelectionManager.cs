@@ -49,20 +49,41 @@ public class GridSelectionManager : MonoBehaviour
         selectAction.Enable();
         selectAction.started += ctx =>
         {
-            _selectionMeshRenderer.material.color = SelectionColor;
-
-            OnGridSelected.Invoke();
-
-
+            Started();
         };
 
         selectAction.canceled += ctx =>
         {
-            _selectionMeshRenderer.material.color = StandardColor;
+            Canceled();
+        };
+    }
 
-            OnGridUnselected.Invoke();
+    private void Started()
+    {
+        _selectionMeshRenderer.material.color = SelectionColor;
 
-            // if (_selectionObject) OnGridUnselectedGO.Invoke(GetSelectedTransform());
+        OnGridSelected.Invoke();
+    }
+
+    private void Canceled()
+    {
+        _selectionMeshRenderer.material.color = StandardColor;
+
+        OnGridUnselected.Invoke();
+
+        // if (_selectionObject) OnGridUnselectedGO.Invoke(GetSelectedTransform());
+    }
+
+    private void OnDestroy()
+    {
+        selectAction.started -= ctx =>
+        {
+            Started();
+        };
+
+        selectAction.canceled -= ctx =>
+        {
+            Canceled();
         };
     }
 

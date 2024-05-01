@@ -10,9 +10,10 @@ using UnityEngine.UI;
 public class TowerManager : MonoBehaviour
 {
     [SerializeField] GridSelectionManager selectionManager;
+    [SerializeField] TowerDefenseGoldManager goldManager;
     [SerializeField] RectTransform towerUI;
     [SerializeField] string layerName = "BuiltTower";
-
+    [SerializeField] AudioClip buildSound;
     [SerializeField] Image icon;
     [SerializeField] TextMeshProUGUI titleText;
     [SerializeField] TextMeshProUGUI rateOfFireText, RadiusText, costText, damageText;
@@ -51,6 +52,10 @@ public class TowerManager : MonoBehaviour
 
     public void BuildTower()
     {
+        if (selectedTower.Data.Cost > playerStats.goldCount) return;
+
+        goldManager.UpdateGold(-(int)selectedTower.Data.Cost);
+
         // selectedTile = selectionManager.GetSelectedGameObject();
         var gridTile = selectedTile.GetComponentInParent<GridTile>();
         gridTile.SetTile(TileType.DirtHigh);
@@ -65,6 +70,8 @@ public class TowerManager : MonoBehaviour
         tower.transform.DOScale(1, 0.3f).SetEase(Ease.OutQuad).SetDelay(0.5f);
 
         //todo play tower build sound
+        // audioSource.PlayOneShot(buildSound);
+
         selectedTile.layer = gridTile.gameObject.layer = LayerMask.NameToLayer(layerName);
     }
     public void SelectTower(Tower tower)
