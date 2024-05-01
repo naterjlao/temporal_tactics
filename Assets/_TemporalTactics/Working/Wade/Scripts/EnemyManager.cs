@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
+    [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip destroySound, completionSound;
     [SerializeField] Enemy enemy;
     [SerializeField] SplineComputer _splineComputer;
@@ -88,8 +89,8 @@ public class EnemyManager : MonoBehaviour
         healthDestroyed += health;
         goldManager.UpdateGold(gold);
 
-        // todo play tower destroy sound
-        // audioSource.PlayOneShot(destroySound);
+        // play tower destroy sound
+        audioSource.PlayOneShot(destroySound);
 
         var progress = GetProgress();
 
@@ -102,8 +103,8 @@ public class EnemyManager : MonoBehaviour
 
             towerDefenseUI.LevelCompleted();
 
-            // todo play tower completed sound
-            // audioSource.PlayOneShot(completedSound);
+            // play tower completed sound
+            audioSource.PlayOneShot(completionSound);
         }
     }
 

@@ -108,6 +108,7 @@ public class GridTile : MonoBehaviour
 
     public void SetTile(GameObject newTile)
     {
+#if UNITY_EDITOR
         if (_tile)
         {
             if (Application.isPlaying)
@@ -130,6 +131,7 @@ public class GridTile : MonoBehaviour
         _tile.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
 
         AltPoints = _tile.GetComponentsInChildren<PathAltPoint>().ToList();
+#endif
     }
 
     public void SetName()

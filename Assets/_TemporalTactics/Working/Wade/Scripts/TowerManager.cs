@@ -19,6 +19,7 @@ public class TowerManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI rateOfFireText, RadiusText, costText, damageText;
 
     public Tower defaultTower, selectedTower;
+    public AudioSource audioSource;
 
     [SerializeField] GameObject selectedTile;
 
@@ -31,7 +32,6 @@ public class TowerManager : MonoBehaviour
 
         SelectTower(defaultTower);
         TweenTowerUI(false, true);
-
     }
 
     public void OpenTowerUI(GameObject selection)
@@ -69,8 +69,8 @@ public class TowerManager : MonoBehaviour
 
         tower.transform.DOScale(1, 0.3f).SetEase(Ease.OutQuad).SetDelay(0.5f);
 
-        //todo play tower build sound
-        // audioSource.PlayOneShot(buildSound);
+        // play tower build sound
+        audioSource.PlayOneShot(buildSound);
 
         selectedTile.layer = gridTile.gameObject.layer = LayerMask.NameToLayer(layerName);
     }

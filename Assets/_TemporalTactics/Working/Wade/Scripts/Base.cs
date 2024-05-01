@@ -7,6 +7,7 @@ public class Base : MonoBehaviour
     [SerializeField] AudioClip failSound;
     [SerializeField] TowerDefenseUI towerDefenseUI;
     public float Health;
+    public AudioSource audioSource;
 
     private void Start()
     {
@@ -37,8 +38,8 @@ public class Base : MonoBehaviour
 
             towerDefenseUI.LevelFailed();
 
-            // todo play tower fail sound
-            // audioSource.PlayOneShot(failSound);
+            // play tower fail sound
+            audioSource.PlayOneShot(failSound);
 
             // Time.timeScale = 0;
         }

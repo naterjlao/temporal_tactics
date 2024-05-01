@@ -15,12 +15,9 @@ EditorBuildSettings:
     path: Assets/_TemporalTactics/Integrated/Scenes/levelOne.unity
     guid: 242400441ef3a3646aba595e788f19ff
   - enabled: 1
-    path: Assets/_TemporalTactics/Working/Wade/Scenes/Water Level - Wade.unity
-    guid: 6397c79b00446f545a5b89296feda906
-  - enabled: 1
-    path: Assets/_TemporalTactics/Working/Wade/Scenes/Snow Level.unity
-    guid: e41724aa1bf96624580d2d21ff5bfb39
-  - enabled: 1
     path: Assets/_TemporalTactics/Integrated/Scenes/levelTwo.unity
     guid: 1955e47cd0c552742be1d9290cc140b2
+  - enabled: 1
+    path: Assets/_TemporalTactics/Integrated/Scenes/levelThree.unity
+    guid: b6bc8a9a3e65c6a4e91a7f2946707cb7
   m_configObjects: {}

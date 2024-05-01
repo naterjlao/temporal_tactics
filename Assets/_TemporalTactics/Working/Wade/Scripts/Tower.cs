@@ -21,7 +21,7 @@ public class Tower : MonoBehaviour
     [SerializeField] Transform FirePoint;
 
     bool canFire = true;
-
+    private AudioSource audioSource;
 
     [Header("Enemies")]
     [SerializeField] Enemy _focusedEnemy;
@@ -31,6 +31,7 @@ public class Tower : MonoBehaviour
     {
         if (!sphereCollider) GetComponentInChildren<SphereCollider>();
         sphereCollider.radius = Data.Radius;
+        audioSource = GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -92,8 +93,9 @@ public class Tower : MonoBehaviour
         // Apply force to the projectile in the forward direction
         newAmmo.Rigidbody.AddForce(FirePoint.forward * Data.FireForce, ForceMode.Impulse);
 
-        // todo Add Fire Sound
-        // audioSource.PlayOneShot(fireSound);
+        // Add Fire Sound
+        // Note - couldn't find an object that actually uses this script?
+        audioSource.PlayOneShot(fireSound);
 
         StartCoroutine(FireCooldown());
     }

@@ -14,7 +14,7 @@ public class prompt_text
 [System.Serializable]
 public class NPCTextPrompt : MonoBehaviour
 {
-    public new GameObject camera;
+    public GameObject camera_;
     public float CharacterDelay;
     public List<prompt_text> Prompt;
     public GameObject TextObject;
@@ -41,7 +41,7 @@ public class NPCTextPrompt : MonoBehaviour
 
     void Update()
     {
-        transform.rotation = Quaternion.LookRotation(transform.position - camera.transform.position);
+        transform.rotation = Quaternion.LookRotation(transform.position - camera_.transform.position);
         if (!writing_text)
         {
             textMeshPro.text = "";
