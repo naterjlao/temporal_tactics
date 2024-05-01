@@ -21,11 +21,13 @@ public class NPCTextPrompt : MonoBehaviour
     public GameObject PanelObject;
     private TextMeshProUGUI textMeshPro;
     private bool writing_text;
+    private AudioSource sfx;
 
     // Start is called before the first frame update
     void Start()
     {
         textMeshPro = TextObject.GetComponent<TextMeshProUGUI>();
+        sfx = GetComponent<AudioSource>();
         this.Hide();
         writing_text = false;
 #if false
@@ -53,6 +55,7 @@ public class NPCTextPrompt : MonoBehaviour
         writing_text = false;
         TextObject.SetActive(false);
         PanelObject.SetActive(false);
+        StopAllCoroutines();
     }
 
     [Button]
@@ -71,6 +74,7 @@ public class NPCTextPrompt : MonoBehaviour
             foreach(char c in line.Text)
             {
                 textMeshPro.text += c;
+                if (c != ' ') sfx.Play();
                 yield return new WaitForSeconds(CharacterDelay);
             }
             textMeshPro.text += "\n";

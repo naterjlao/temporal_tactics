@@ -92,6 +92,8 @@ public class LootBox : MonoBehaviour
     /// </summary>
     Animator animator;
 
+    AudioSource sfx;
+
     /// <summary>
     /// You can call OnBoxOpen and OnBoxClose as events, for
     /// instance, you can get what's inside the box.
@@ -103,6 +105,7 @@ public class LootBox : MonoBehaviour
     {
         // gets the animator
         animator = GetComponent<Animator>();
+        sfx = GetComponent<AudioSource>();
 
         // set the animation to bounce or not
         BounceBox(bouncingBox);
@@ -149,6 +152,7 @@ public class LootBox : MonoBehaviour
         {
             // add gold to the player's gold count
             playerStats.goldCount += 300;
+            sfx.Play();
             string goldCountStringUpdated = playerStats.goldCount.ToString();
             Debug.Log(goldCountStringUpdated);
 
